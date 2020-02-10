@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a2e1d731-38bc-4889-9147-e97e24870488" name="Default Changelist" comment="" />
+    <list default="true" id="a2e1d731-38bc-4889-9147-e97e24870488" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vuelos/App.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vuelos/App.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vuelos/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vuelos/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vuelos/modelo/Estadia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vuelos/modelo/Estadia.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/App$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/App$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/modelo/Estadia.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/modelo/Estadia.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/modelo/Movimiento.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/modelo/Movimiento.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/modelo/TasaEstacionamiento.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/modelo/TasaEstacionamiento.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/modelo/Vuelo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/modelo/Vuelo.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,6 +26,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -22,13 +37,16 @@
     </option>
   </component>
   <component name="ProjectId" id="1XAuhGaeJRX4UCFNdCBHg8VETeS" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="269" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -44,6 +62,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/vuelos/recursos" />
       <recent name="$PROJECT_DIR$/src/main/java/com/vuelos" />
     </key>
   </component>
@@ -86,7 +105,7 @@
       <option name="presentableId" value="Default" />
       <updated>1580501337742</updated>
       <workItem from="1580501340940" duration="37211000" />
-      <workItem from="1581100991868" duration="36888000" />
+      <workItem from="1581100991868" duration="40717000" />
     </task>
     <servers />
   </component>
@@ -122,27 +141,27 @@
     </state>
     <state x="613" y="344" key="#com.intellij.uiDesigner.palette.ComponentItemDialog.OneOff/0.0.1440.900@0.0.1440.900" timestamp="1580580473992" />
     <state x="507" y="262" key="#com.intellij.uiDesigner.palette.ComponentItemDialog/0.0.1440.900@0.0.1440.900" timestamp="1580761809508" />
-    <state width="1398" height="119" key="GridCell.Tab.0.bottom" timestamp="1581253459075">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1398" height="119" key="GridCell.Tab.0.bottom" timestamp="1581372320717">
+      <screen x="0" y="23" width="1440" height="825" />
     </state>
-    <state width="1398" height="119" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1581253459075" />
+    <state width="1398" height="119" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1581346575284" />
     <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.23.1440.825@0.0.1440.848" timestamp="1580766144195" />
-    <state width="1398" height="119" key="GridCell.Tab.0.bottom/0.23.1440.825@0.23.1440.825" timestamp="1581253426613" />
-    <state width="1398" height="119" key="GridCell.Tab.0.center" timestamp="1581253459073">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1398" height="119" key="GridCell.Tab.0.bottom/0.23.1440.825@0.23.1440.825" timestamp="1581372320717" />
+    <state width="1398" height="119" key="GridCell.Tab.0.center" timestamp="1581372320713">
+      <screen x="0" y="23" width="1440" height="825" />
     </state>
-    <state width="1398" height="119" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1581253459073" />
-    <state width="1398" height="119" key="GridCell.Tab.0.center/0.23.1440.825@0.23.1440.825" timestamp="1581253426604" />
-    <state width="1398" height="119" key="GridCell.Tab.0.left" timestamp="1581253459072">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1398" height="119" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1581346575281" />
+    <state width="1398" height="119" key="GridCell.Tab.0.center/0.23.1440.825@0.23.1440.825" timestamp="1581372320713" />
+    <state width="1398" height="119" key="GridCell.Tab.0.left" timestamp="1581372320712">
+      <screen x="0" y="23" width="1440" height="825" />
     </state>
-    <state width="1398" height="119" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1581253459072" />
-    <state width="1398" height="119" key="GridCell.Tab.0.left/0.23.1440.825@0.23.1440.825" timestamp="1581253426602" />
-    <state width="1398" height="119" key="GridCell.Tab.0.right" timestamp="1581253459074">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1398" height="119" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1581346575280" />
+    <state width="1398" height="119" key="GridCell.Tab.0.left/0.23.1440.825@0.23.1440.825" timestamp="1581372320712" />
+    <state width="1398" height="119" key="GridCell.Tab.0.right" timestamp="1581372320716">
+      <screen x="0" y="23" width="1440" height="825" />
     </state>
-    <state width="1398" height="119" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1581253459074" />
-    <state width="1398" height="119" key="GridCell.Tab.0.right/0.23.1440.825@0.23.1440.825" timestamp="1581253426610" />
+    <state width="1398" height="119" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1581346575283" />
+    <state width="1398" height="119" key="GridCell.Tab.0.right/0.23.1440.825@0.23.1440.825" timestamp="1581372320716" />
     <state x="375" y="72" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1580767287298">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -155,25 +174,14 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="458" y="234" key="extract.method.dialog/0.0.1440.900@0.0.1440.900" timestamp="1581180981207" />
-    <state width="416" height="201" key="javadoc.popup.new" timestamp="1581253214133">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="416" height="201" key="javadoc.popup.new" timestamp="1581372653146">
+      <screen x="0" y="23" width="1440" height="825" />
     </state>
-    <state width="416" height="201" key="javadoc.popup.new/0.0.1440.900@0.0.1440.900" timestamp="1581253214133" />
-    <state width="416" height="201" key="javadoc.popup.new/0.23.1440.825@0.23.1440.825" timestamp="1581252799563" />
+    <state width="416" height="201" key="javadoc.popup.new/0.0.1440.900@0.0.1440.900" timestamp="1581372038809" />
+    <state width="416" height="201" key="javadoc.popup.new/0.23.1440.825@0.23.1440.825" timestamp="1581372653146" />
     <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1581169473623">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1581169473623" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/vuelos/App.java</url>
-          <line>236</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

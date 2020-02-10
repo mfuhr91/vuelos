@@ -38,14 +38,14 @@ public class Estadia {
     }
 
     public int totalHoras() throws ParseException {
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy");
-        Date hoy = new Date();
-        String parseHoy = simpleDateFormat.format(hoy);
-        String parseFechaInicial = simpleDateFormat.format(fechaArribo);
-        Date fechaHoy = simpleDateFormat.parse(parseHoy);
-        Date fechaInicial = simpleDateFormat.parse(parseFechaInicial);
+       // SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        //Date hoy = new Date();
+        //String parseHoy = simpleDateFormat.format(hoy);
+        //String parseFechaInicial = simpleDateFormat.format(fechaArribo);
+        //Date fechaHoy = simpleDateFormat.parse(parseHoy);
+        //Date fechaInicial = simpleDateFormat.parse(parseFechaInicial);
 
-        if(fechaArribo.equals(fechaHoy) || fechaArribo.after(fechaHoy)){
+        //if(fechaArribo.equals(fechaHoy) || fechaArribo.after(fechaHoy)){
             if (fechaSalida.getTime() > fechaArribo.getTime()) {
                 double totalArribo = (horaArribo.getTime());
                 double dias = ((fechaSalida.getTime() - fechaArribo.getTime()));
@@ -57,9 +57,9 @@ public class Estadia {
                 long totalSalida = (horaSalida.getTime()); //14hs = 50400000 milsec
                 this.total = (totalSalida - totalArribo) / 1000 / 60 / 60;
             }
-        }else{
-                JOptionPane.showMessageDialog(null, "La fecha inicial no puede ser menor al día de hoy!");
-        }
+       // }else{
+                //JOptionPane.showMessageDialog(null, "La fecha inicial no puede ser menor al día de hoy!");
+//        }
 
         return (int) Math.ceil(this.total);
     }

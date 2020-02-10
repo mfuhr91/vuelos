@@ -15,9 +15,7 @@ import static java.lang.Integer.parseInt;
 
 public class App {
 
-    private Container getPanelMain() {
-        return panelMain;
-    }
+    private Container getPanelMain() {return panelMain;}
 
 
     private JLabel labelVuelo;
@@ -70,6 +68,7 @@ public class App {
     }
 
     public static void main(String[] args) {
+
         JFrame ventana = new JFrame(" --- Vuelo --- ");
         ventana.setContentPane(new App().getPanelMain());
         ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -89,7 +88,7 @@ public class App {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                    if(!pesoVuelo.getText().isEmpty() && pesoVuelo.getText().length() < 1 &&
+                    if(!pesoVuelo.getText().isEmpty() &&
                             !cambioMoneda.getText().isEmpty() && !nroPax.getText().isEmpty()) {
 
                         try {
