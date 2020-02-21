@@ -64,4 +64,11 @@ public class Vuelo {
         return destino;
     }
 
+    public Estadia getEstadia() {
+        return estadia;
+    }
+
+    public void setEstadia(Estadia estadia) {
+        this.estadia = estadia;
+    }
 }

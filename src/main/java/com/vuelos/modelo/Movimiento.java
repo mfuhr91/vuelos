@@ -27,6 +27,8 @@ public class Movimiento {
         this.tasaEstacionamiento = tasaEstacionamiento;
         this.cambioMoneda = cambioMoneda;
     }
+
+    // Calcula costos de moviemiento
     public void calcularCostos() throws ParseException {
         DecimalFormat df = new DecimalFormat("#0.00");
         if (vuelo.getProcedencia().equals("cabotaje") && vuelo.getDestino().equals("cabotaje")){ // PAX y MOV en pesos

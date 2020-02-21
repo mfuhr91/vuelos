@@ -13,7 +13,7 @@ import java.util.Date;
 import static java.lang.Double.parseDouble;
 import static java.lang.Integer.parseInt;
 
-public class App {
+public class App extends JFrame{
 
     private Container getPanelMain() {return panelMain;}
 
@@ -245,6 +245,8 @@ public class App {
 
     }
 
+
+
     public void cargarDatos(){
         Estadia estadia = new Estadia();
         setProcedencia("cabotaje");
@@ -261,5 +263,9 @@ public class App {
         procCabotajeBtn.setSelected(true);
         destCabotajeBtn.setSelected(true);
     }
+
+
+
+
 
 }

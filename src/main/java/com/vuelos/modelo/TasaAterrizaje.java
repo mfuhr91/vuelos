@@ -1,48 +1,75 @@
 package com.vuelos.modelo;
 
+import java.util.Date;
+
 public class TasaAterrizaje {
 
     private Vuelo vuelo;
     private String procedencia;
-    private double menos5tn; //tasa mínima
-    private double de5a30tn;
+    private double tasaMinima;
+    private double menosDe30tn;
     private double de31a80tn;
     private double de81a170tn;
     private double mas170tn;
+    private double fueraHorario;
+    private double subTotal;
 
 
     public TasaAterrizaje(Vuelo vuelo){
 
         if(vuelo.getProcedencia().equals("cabotaje")){
 
-            setMenos5tn(14.10);
-            setDe5a30tn(1.05);
+            if(((vuelo.getEstadia().getFechaSalida().getTime() - vuelo.getEstadia().getFechaArribo().getTime()) +
+                    vuelo.getEstadia().getHoraSalida().getTime()) >= 93600000 ||
+                    (vuelo.getEstadia().getHoraArribo().getTime() <= 36000000) ||
+                    (vuelo.getEstadia().getHoraSalida().getTime() >= 93600000)) {
+                fueraHorario = 260.00;
+            }
+
+            setTasaMinima(14.10);
+            setMenosDe30tn(1.05);
             setDe31a80tn(1.14);
             setDe81a170tn(1.26);
             setMas170tn(1.47);
 
-            if(vuelo.getPeso() < 5.00){
-                vuelo.setCostoAterrizaje(menos5tn);
-            }else if(vuelo.getPeso() >= 5.00 && vuelo.getPeso() < 30.00){
-                vuelo.setCostoAterrizaje(vuelo.getPeso() * de5a30tn);
+
+            if(vuelo.getPeso() < 30.00){
+                subTotal = vuelo.getPeso() * menosDe30tn;
+                if(subTotal <= tasaMinima){
+                    vuelo.setCostoAterrizaje(tasaMinima+fueraHorario);
+                }else{
+                    vuelo.setCostoAterrizaje(vuelo.getPeso() * (menosDe30tn+fueraHorario));
+                }
             }else if(vuelo.getPeso()  >= 31.00 && vuelo.getPeso() < 80.00){
-                vuelo.setCostoAterrizaje(vuelo.getPeso() * de31a80tn);
+                vuelo.setCostoAterrizaje(vuelo.getPeso() * (de31a80tn+fueraHorario));
             }else if(vuelo.getPeso() >= 81.00 && vuelo.getPeso() < 170.00){
-                vuelo.setCostoAterrizaje(vuelo.getPeso() * de81a170tn);
+                vuelo.setCostoAterrizaje(vuelo.getPeso() * (de81a170tn+fueraHorario));
             }else if(vuelo.getPeso() >= 170.00){
-                vuelo.setCostoAterrizaje(vuelo.getPeso() * mas170tn);
+                vuelo.setCostoAterrizaje(vuelo.getPeso() * (mas170tn+fueraHorario));
             }
+            System.out.println(vuelo.getCostoAterrizaje());
         }else{
-            setMenos5tn(20.00);
-            setDe5a30tn(4.62);
+
+            if(((vuelo.getEstadia().getFechaSalida().getTime() - vuelo.getEstadia().getFechaArribo().getTime()) +
+                    vuelo.getEstadia().getHoraSalida().getTime()) >= 93600000 ||
+                    (vuelo.getEstadia().getHoraArribo().getTime() <= 36000000) ||
+                    (vuelo.getEstadia().getHoraSalida().getTime() >= 93600000)) {
+                fueraHorario = 260.00;
+            }
+
+            setTasaMinima(20.00);
+            setMenosDe30tn(4.62);
             setDe31a80tn(5.28);
             setDe81a170tn(6.49);
             setMas170tn(7.19);
 
-            if(vuelo.getPeso() < 5.00){
-                vuelo.setCostoAterrizaje(menos5tn);
-            }else if(vuelo.getPeso() >= 5.00 && vuelo.getPeso() < 30.00){
-                vuelo.setCostoAterrizaje(vuelo.getPeso() * de5a30tn);
+            if(vuelo.getPeso() < 30.00){
+                subTotal = vuelo.getPeso() * menosDe30tn;
+                if(subTotal <= tasaMinima){
+                    vuelo.setCostoAterrizaje(tasaMinima+fueraHorario);
+                }else{
+                    vuelo.setCostoAterrizaje(vuelo.getPeso() * (menosDe30tn+fueraHorario));
+                }
             }else if(vuelo.getPeso() >= 31.00 && vuelo.getPeso() < 80.00){
                 vuelo.setCostoAterrizaje(vuelo.getPeso() * de31a80tn);
             }else if(vuelo.getPeso() >= 81.00 && vuelo.getPeso() < 170.00){
@@ -70,20 +97,20 @@ public class TasaAterrizaje {
         this.procedencia = procedencia;
     }
 
-    public double getMenos5tn() {
-        return menos5tn;
+    public double getTasaMinima() {
+        return tasaMinima;
     }
 
-    public void setMenos5tn(double menos5tn) {
-        this.menos5tn = menos5tn;
+    public void setTasaMinima(double tasaMinima) {
+        this.tasaMinima = tasaMinima;
     }
 
-    public double getDe5a30tn() {
-        return de5a30tn;
+    public double getMenosDe30tn() {
+        return menosDe30tn;
     }
 
-    public void setDe5a30tn(double de5a30tn) {
-        this.de5a30tn = de5a30tn;
+    public void setMenosDe30tn(double menosDe30tn) {
+        this.menosDe30tn = menosDe30tn;
     }
 
     public double getDe31a80tn() {

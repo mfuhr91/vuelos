@@ -11,14 +11,14 @@ public class TasaEstacionamiento {
     private double mas170tn;
 
     public TasaEstacionamiento(Vuelo vuelo) throws ParseException {
-
+        this.vuelo = vuelo;
         if(vuelo.getProcedencia().equals("cabotaje")){
 
             setMenos5tn(5.20);
             setDe5a80tn(0.10);
             setDe81a170tn(0.13);
             setMas170tn(0.17);
-
+            // FALTA ACOMODAR LA TASA MINIMA
             if(vuelo.getPeso() < 5.00){
                 vuelo.setCostoEstacionamiento(menos5tn);
             }else if(vuelo.getPeso() >= 5.00 && vuelo.getPeso() < 80.00){

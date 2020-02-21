@@ -38,29 +38,58 @@ public class Estadia {
     }
 
     public int totalHoras() throws ParseException {
-       // SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy");
-        //Date hoy = new Date();
-        //String parseHoy = simpleDateFormat.format(hoy);
-        //String parseFechaInicial = simpleDateFormat.format(fechaArribo);
-        //Date fechaHoy = simpleDateFormat.parse(parseHoy);
-        //Date fechaInicial = simpleDateFormat.parse(parseFechaInicial);
-
-        //if(fechaArribo.equals(fechaHoy) || fechaArribo.after(fechaHoy)){
             if (fechaSalida.getTime() > fechaArribo.getTime()) {
                 double totalArribo = (horaArribo.getTime());
                 double dias = ((fechaSalida.getTime() - fechaArribo.getTime()));
                 double totalSalida = (horaSalida.getTime() + dias);
-                this.total = (totalSalida - totalArribo)/1000/60/60;
+                total = ((totalSalida - totalArribo) /1000/60/60);
+
 
             } else if(fechaSalida.getTime() == fechaArribo.getTime()) {
-                long totalArribo = (horaArribo.getTime()); // 11horas = 39600000milsec
-                long totalSalida = (horaSalida.getTime()); //14hs = 50400000 milsec
-                this.total = (totalSalida - totalArribo) / 1000 / 60 / 60;
+                double totalArribo = (horaArribo.getTime()); // 11horas = 39600000milsec
+                double totalSalida = (horaSalida.getTime()); //14hs = 50400000 milsec
+                total = ((totalSalida - totalArribo) /1000/60/60);
             }
-       // }else{
-                //JOptionPane.showMessageDialog(null, "La fecha inicial no puede ser menor al día de hoy!");
-//        }
+        return (int) Math.ceil(total);
+    }
 
-        return (int) Math.ceil(this.total);
+    public Date getFechaArribo() {
+        return fechaArribo;
+    }
+
+    public void setFechaArribo(Date fechaArribo) {
+        this.fechaArribo = fechaArribo;
+    }
+
+    public Date getHoraArribo() {
+        return horaArribo;
+    }
+
+    public void setHoraArribo(Date horaArribo) {
+        this.horaArribo = horaArribo;
+    }
+
+    public Date getFechaSalida() {
+        return fechaSalida;
+    }
+
+    public void setFechaSalida(Date fechaSalida) {
+        this.fechaSalida = fechaSalida;
+    }
+
+    public Date getHoraSalida() {
+        return horaSalida;
+    }
+
+    public void setHoraSalida(Date horaSalida) {
+        this.horaSalida = horaSalida;
+    }
+
+    public double getTotal() {
+        return total;
+    }
+
+    public void setTotal(double total) {
+        this.total = total;
     }
 }
