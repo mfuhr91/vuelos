@@ -20,7 +20,7 @@ public class Movimiento {
     private String mostrarPrecioDolares;
     private String mostrarPrecioPesos;
 
-    public Movimiento(Vuelo vuelo, Estadia estadia, TasaAterrizaje tasaAterrizaje, TasaEstacionamiento tasaEstacionamiento, Double cambioMoneda) {
+    public Movimiento(Vuelo vuelo, Estadia estadia, TasaAterrizaje tasaAterrizaje, TasaEstacionamiento tasaEstacionamiento, double cambioMoneda) {
         this.vuelo = vuelo;
         this.estadia = estadia;
         this.tasaAterrizaje = tasaAterrizaje;

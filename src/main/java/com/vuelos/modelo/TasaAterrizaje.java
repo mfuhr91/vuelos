@@ -47,7 +47,6 @@ public class TasaAterrizaje {
             }else if(vuelo.getPeso() >= 170.00){
                 vuelo.setCostoAterrizaje(vuelo.getPeso() * (mas170tn+fueraHorario));
             }
-            System.out.println(vuelo.getCostoAterrizaje());
         }else{
 
             if(((vuelo.getEstadia().getFechaSalida().getTime() - vuelo.getEstadia().getFechaArribo().getTime()) +
