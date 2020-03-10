@@ -2,6 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a2e1d731-38bc-4889-9147-e97e24870488" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/target/classes/com/vuelos/App$8.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/vuelos/Tasas$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/vuelos/Tasas$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/vuelos/Tasas.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/vuelos/App.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vuelos/App.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/vuelos/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vuelos/App.java" afterDir="false" />
