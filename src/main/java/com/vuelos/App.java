@@ -55,7 +55,9 @@ public class App extends JFrame{
     private JLabel tasaFueraHorario;
     private JLabel tasaInvernal;
     private JLabel tasaBalizamiento;
-    private JButton valoresBtn;
+    private JButton tasasBtn;
+    private JButton balizaBtn;
+    private JButton salirBtn;
     //private JTextField cambioMoneda;
     private String procedencia;
     private String destino;
@@ -85,6 +87,7 @@ public class App extends JFrame{
         ventanaApp.setLocationRelativeTo(null);
         ventanaApp.setVisible(true);
 
+
     }
 
 
@@ -92,9 +95,8 @@ public class App extends JFrame{
     public App() throws JAXBException {
 
         cargarDatos();
-        Persistencia.cargarDatos();
-        TasaAterrizaje ate = new TasaAterrizaje();
-        System.out.println(ate.getTasaMinimaCab());
+        Persistencia.cargarAterrizaje();
+        Persistencia.cargarEstacionamiento();
 
         calcularBtn.addActionListener(new ActionListener() {
             @Override
@@ -136,7 +138,7 @@ public class App extends JFrame{
                 horaArribo.setText(estadia.mostrarHoraActual());
                 horaDespegue.setText(estadia.mostrarHoraActual());
                 estadiaTotal.setText("");
-                cambioMoneda.setText("63.25");
+                cambioMoneda.setText("63,25");
                 precioTotalMovimiento.setText("");
                 paxTotal.setText("");
                 precioTotalPesos.setText("");
@@ -181,22 +183,29 @@ public class App extends JFrame{
             }
         });
 
-        valoresBtn.addActionListener(new ActionListener() {
+        tasasBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                JFrame ventanaValores = new JFrame(" --- Valores Generales --- ");
+                JFrame ventanaTasas = new JFrame(" --- Tasas --- ");
                 try {
-                    ventanaValores.setContentPane(new Valores().getPanelMain());
+                    ventanaTasas.setContentPane(new Tasas().getPanelMain());
                 } catch (JAXBException ex) {
                     ex.printStackTrace();
                 }
-                ventanaValores.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-                ventanaValores.pack();
-                ventanaValores.setLocationRelativeTo(null);
-                ventanaValores.setVisible(true);
+                ventanaTasas.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+                ventanaTasas.pack();
+                ventanaTasas.setLocationRelativeTo(null);
+                ventanaTasas.setVisible(true);
+            }
 
+        });
+        salirBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                cerrarVentana();
             }
         });
+
     }
 
 
@@ -209,7 +218,7 @@ public class App extends JFrame{
         matVuelo.setText("##-###");
         pesoVuelo.setText("1");
         nroPax.setText("0");
-        cambioMoneda.setText("63.25");
+        cambioMoneda.setText("63,25");
         fechaArribo.setText(estadia.mostrarFechaHoy());
         fechaDespegue.setText(estadia.mostrarFechaHoy());
         horaArribo.setText(estadia.mostrarHoraActual());
@@ -247,7 +256,7 @@ public class App extends JFrame{
             estadiaTotal.setText(String.valueOf((estadia.totalHoras())));
 
             Movimiento movimiento = new Movimiento(vuelo, estadia, aterrizaje,
-                    estacionamiento, parseDouble(cambioMoneda.getText()));
+                    estacionamiento, parseDouble(cambioMoneda.getText().replace(",",".")));
 
             movimiento.calcularCostos();
 
@@ -260,7 +269,7 @@ public class App extends JFrame{
             precioTotalPesos.setText(movimiento.getMostrarPrecioPesos());
             precioTotalDolares.setText(movimiento.getMostrarPrecioDolares());
 
-        } catch (ParseException ex) {
+        } catch (ParseException | JAXBException ex) {
             JOptionPane.showMessageDialog(null, "Ingrese una fecha y hora con formato DD/MM/AAAA HH:MM");
         }
     }
@@ -288,7 +297,7 @@ public class App extends JFrame{
 
             estadiaTotal.setText(String.valueOf((estadia.totalHoras())));
             Movimiento movimiento = new Movimiento(vuelo, estadia, aterrizaje,
-                    estacionamiento, parseDouble(cambioMoneda.getText()));
+                    estacionamiento, parseDouble(cambioMoneda.getText().replace(",",".")));
 
             movimiento.calcularCostos();
 
@@ -299,9 +308,14 @@ public class App extends JFrame{
             precioTotalDolares.setText(movimiento.getMostrarPrecioDolares());
 
 
-        }catch (ParseException ex){
+        }catch (ParseException | JAXBException ex){
             JOptionPane.showMessageDialog(null, "Ingrese una fecha y hora con formato DD/MM/AAAA HH:MM");
         }
+    }
+
+
+
+    public void cerrarVentana(){
     }
 
 

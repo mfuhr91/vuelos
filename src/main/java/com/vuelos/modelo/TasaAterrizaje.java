@@ -1,5 +1,6 @@
 package com.vuelos.modelo;
 
+import javax.xml.bind.JAXBException;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
@@ -30,37 +31,24 @@ public class TasaAterrizaje {
     private double tasa;
 
     public TasaAterrizaje(){
-        /*
-        setTasaMinimaCab(14.10);
-        setMenosDe30tnCab(1.05);
-        setDe31a80tnCab(1.14);
-        setDe81a170tnCab(1.26);
-        setMas170tnCab(1.47);
-
-        setTasaMinimaInter(20.00);
-        setMenosDe30tnInter(4.62);
-        setDe31a80tnInter(5.28);
-        setDe81a170tnInter(6.49);
-        setMas170tnInter(7.19);
-
-
-         */
-
     }
 
-    public TasaAterrizaje(Vuelo vuelo){
+    public TasaAterrizaje(Vuelo vuelo) throws JAXBException {
+        TasaAterrizaje aterrizaje = Persistencia.cargarAterrizaje();
         if(vuelo.getProcedencia().equals("cabotaje")){
 
             if ((vuelo.getEstadia().getHoraArribo().getTime() <= 36000000)              // 10 horas = 7:00 hora en Argentina
                     || (vuelo.getEstadia().getHoraSalida().getTime() >= 93600000)) {    // 26hs = 23:00 hora en Argentina
-                fueraHorario = 260.00;
+                fueraHorario = aterrizaje.getFueraHorario();
             }
 
-            setTasaMinimaCab(14.10);
-            setMenosDe30tnCab(1.05);
-            setDe31a80tnCab(1.14);
-            setDe81a170tnCab(1.26);
-            setMas170tnCab(1.47);
+            setTasaMinimaCab(aterrizaje.getTasaMinimaCab());
+            setMenosDe30tnCab(aterrizaje.getMenosDe30tnCab());
+            setDe31a80tnCab(aterrizaje.getDe31a80tnCab());
+            setDe81a170tnCab(aterrizaje.getDe81a170tnCab());
+            setMas170tnCab(aterrizaje.getMas170tnCab());
+
+
 
 
             if(vuelo.getPeso() < 30.00){
@@ -87,14 +75,14 @@ public class TasaAterrizaje {
 
             if ((vuelo.getEstadia().getHoraArribo().getTime() <= 36000000)              // 10 horas = 7:00 hora en Argentina
                     || (vuelo.getEstadia().getHoraSalida().getTime() >= 93600000)) {    // 26hs = 23:00 hora en Argentina
-                fueraHorario = 260.00;
+                fueraHorario = aterrizaje.getFueraHorario();
             }
 
-            setTasaMinimaInter(20.00);
-            setMenosDe30tnInter(4.62);
-            setDe31a80tnInter(5.28);
-            setDe81a170tnInter(6.49);
-            setMas170tnInter(7.19);
+            setTasaMinimaInter(aterrizaje.getTasaMinimaInter());
+            setMenosDe30tnInter(aterrizaje.getMenosDe30tnInter());
+            setDe31a80tnInter(aterrizaje.getDe31a80tnInter());
+            setDe81a170tnInter(aterrizaje.getDe81a170tnInter());
+            setMas170tnInter(aterrizaje.getMas170tnInter());
 
             if(vuelo.getPeso() < 30.00){
                 subTotal = vuelo.getPeso() * menosDe30tnInter;

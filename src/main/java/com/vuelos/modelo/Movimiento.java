@@ -30,7 +30,7 @@ public class Movimiento {
 
     // Calcula costos de movimiento
     public void calcularCostos() throws ParseException {
-        DecimalFormat df = new DecimalFormat("#0.00");
+        DecimalFormat df = new DecimalFormat("0.00");
         if (vuelo.getProcedencia().equals("cabotaje") && vuelo.getDestino().equals("cabotaje")){ // PAX y MOV en pesos
             costoPax = vuelo.getNroPax() * 140;
             precio = vuelo.getCostoAterrizaje() + (vuelo.getCostoEstacionamiento() * estadia.totalHoras());

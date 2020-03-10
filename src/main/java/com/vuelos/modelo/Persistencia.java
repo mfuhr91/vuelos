@@ -4,6 +4,8 @@ import org.w3c.dom.ls.LSOutput;
 
 import javax.xml.bind.*;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 
 
@@ -24,8 +26,10 @@ public class Persistencia {
             marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
 
             // crear el archivo o imprime
-            marshaller.marshal(aterrizaje, new File("/Users/mariano/IdeaProjects/vuelos/tasas_aterrizaje.xml"));
-            marshaller.marshal(estacionamiento, new File("/Users/mariano/IdeaProjects/vuelos/tasas_estacionamiento.xml"));
+            marshaller.marshal(aterrizaje,
+                    new File("/Users/mariano/IdeaProjects/vuelos/tasas_aterrizaje.xml"));
+            marshaller.marshal(estacionamiento,
+                    new File("/Users/mariano/IdeaProjects/vuelos/tasas_estacionamiento.xml"));
         } catch (PropertyException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
@@ -35,22 +39,46 @@ public class Persistencia {
         }
     }
 
-    public static void cargarDatos() throws JAXBException{
+    public static TasaAterrizaje cargarAterrizaje() throws JAXBException{
         try{
             //CONTEXTO
             JAXBContext contexto = JAXBContext.newInstance(TasaAterrizaje.class, TasaEstacionamiento.class);
+
 
             //Realiza la conversión de XML a Objeto
             Unmarshaller unmarshaller = contexto.createUnmarshaller();
 
             //C
             TasaAterrizaje aterrizaje = (TasaAterrizaje) unmarshaller.unmarshal(
-                    new File ("/Users/mariano/IdeaProjects/vuelos/tasas_aterrizaje.xml"));
+                    new FileInputStream("/Users/mariano/IdeaProjects/vuelos/tasas_aterrizaje.xml"));
             TasaEstacionamiento estacionamiento = (TasaEstacionamiento) unmarshaller.unmarshal(
-                    new File ("/Users/mariano/IdeaProjects/vuelos/tasas_estacionamiento.xml"));
+                    new FileInputStream ("/Users/mariano/IdeaProjects/vuelos/tasas_estacionamiento.xml"));
+            return aterrizaje;
 
-        }catch(JAXBException e){
+        }catch(JAXBException | FileNotFoundException e){
             e.printStackTrace();
         }
+        return cargarAterrizaje();
+    }
+
+    public static TasaEstacionamiento cargarEstacionamiento() {
+        try{
+            //CONTEXTO
+            JAXBContext contexto = JAXBContext.newInstance(TasaAterrizaje.class, TasaEstacionamiento.class);
+
+
+            //Realiza la conversión de XML a Objeto
+            Unmarshaller unmarshaller = contexto.createUnmarshaller();
+
+            //C
+            TasaEstacionamiento estacionamiento = (TasaEstacionamiento) unmarshaller.unmarshal(
+                    new FileInputStream ("/Users/mariano/IdeaProjects/vuelos/tasas_estacionamiento.xml"));
+
+            return estacionamiento;
+
+        }catch(JAXBException | FileNotFoundException e){
+            e.printStackTrace();
+        }
+        return cargarEstacionamiento();
     }
 }
