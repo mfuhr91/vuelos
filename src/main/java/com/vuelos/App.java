@@ -3,6 +3,7 @@ package com.vuelos;
 import com.vuelos.modelo.*;
 
 import javax.swing.*;
+import javax.xml.bind.JAXBException;
 import java.awt.*;
 import java.awt.event.*;
 import java.text.DecimalFormat;
@@ -54,6 +55,7 @@ public class App extends JFrame{
     private JLabel tasaFueraHorario;
     private JLabel tasaInvernal;
     private JLabel tasaBalizamiento;
+    private JButton valoresBtn;
     //private JTextField cambioMoneda;
     private String procedencia;
     private String destino;
@@ -74,22 +76,25 @@ public class App extends JFrame{
         this.procedencia = procedencia;
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws JAXBException {
 
-        JFrame ventana = new JFrame(" --- Vuelos AIUMA --- ");
-        ventana.setContentPane(new App().getPanelMain());
-        ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        ventana.pack();
-        ventana.setLocationRelativeTo(null);
-        ventana.setVisible(true);
+        JFrame ventanaApp = new JFrame(" --- Vuelos AIUMA --- ");
+        ventanaApp.setContentPane(new App().getPanelMain());
+        ventanaApp.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        ventanaApp.pack();
+        ventanaApp.setLocationRelativeTo(null);
+        ventanaApp.setVisible(true);
 
     }
 
 
 
-    public App() {
+    public App() throws JAXBException {
 
         cargarDatos();
+        Persistencia.cargarDatos();
+        TasaAterrizaje ate = new TasaAterrizaje();
+        System.out.println(ate.getTasaMinimaCab());
 
         calcularBtn.addActionListener(new ActionListener() {
             @Override
@@ -99,92 +104,14 @@ public class App extends JFrame{
                             && !cambioMoneda.getText().isEmpty()
                             && !nroPax.getText().isEmpty()) {
 
-                            DecimalFormat df = new DecimalFormat("#0.00");
-                            try {
-                                Date dateArribo = null;
-                                Date dateDespegue = null;
-                                Date timeArribo = null;
-                                Date timeDespegue = null;
-
-                                SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy");
-                                SimpleDateFormat simpleTimeFormat = new SimpleDateFormat("HH:mm");
-
-                                dateArribo = simpleDateFormat.parse(fechaArribo.getText());
-                                dateDespegue = simpleDateFormat.parse(fechaDespegue.getText());
-                                timeArribo = simpleTimeFormat.parse(horaArribo.getText());
-                                timeDespegue = simpleTimeFormat.parse(horaDespegue.getText());
-
-                                Estadia estadia = new Estadia(dateArribo, dateDespegue, timeArribo, timeDespegue);
-
-                                Vuelo vuelo = new Vuelo(nroVuelo.getText(), matVuelo.getText(),
-                                        parseInt(nroPax.getText()), parseInt(pesoVuelo.getText()),
-                                        getProcedencia(), getDestino(), estadia);
-
-                                TasaAterrizaje tasaAterrizaje = new TasaAterrizaje(vuelo);
-
-                                TasaEstacionamiento tasaEstacionamiento = new TasaEstacionamiento(vuelo);
-
-                                //double costoAterrizaje = vuelo.getCostoAterrizaje();
-                                //double cambio = parseDouble(cambioMoneda.getText());
-
-                                estadiaTotal.setText(String.valueOf((estadia.totalHoras())));
-
-                                Movimiento movimiento = new Movimiento(vuelo, estadia, tasaAterrizaje,
-                                        tasaEstacionamiento, parseDouble(cambioMoneda.getText()));
-
-                                movimiento.calcularCostos();
-
-
-                                precioTotalMovimiento.setText(movimiento.getMostrarPrecio());
-                                paxTotal.setText(movimiento.getMostrarCostoPax());
-
-                                precioTotalPesos.setText(movimiento.getMostrarPrecioPesos());
-                                precioTotalDolares.setText(movimiento.getMostrarPrecioDolares());
-
-                            } catch (ParseException ex) {
-                                JOptionPane.showMessageDialog(null, "Ingrese una fecha y hora con formato DD/MM/AAAA HH:MM");
-                            }
+                        crearVueloSinPax();
 
                     }else if(!pesoVuelo.getText().isEmpty() && !cambioMoneda.getText().isEmpty()){
-                        try {
-                            Date dateArribo = null;
-                            Date dateDespegue = null;
-                            Date timeArribo = null;
-                            Date timeDespegue = null;
-                            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy");
-                            SimpleDateFormat simpleTimeFormat = new SimpleDateFormat("HH:mm");
-                            dateArribo = simpleDateFormat.parse(fechaArribo.getText());
-                            dateDespegue = simpleDateFormat.parse(fechaDespegue.getText());
-                            timeArribo = simpleTimeFormat.parse(horaArribo.getText());
-                            timeDespegue = simpleTimeFormat.parse(horaDespegue.getText());
-                            Estadia estadia = new Estadia(dateArribo, dateDespegue, timeArribo, timeDespegue);
 
-
-                            Vuelo vuelo = new Vuelo(nroVuelo.getText(), matVuelo.getText(), parseInt(pesoVuelo.getText()), getProcedencia(), getDestino(), estadia);
-
-                            TasaAterrizaje tasaAterrizaje = new TasaAterrizaje(vuelo);
-                            TasaEstacionamiento tasaEstacionamiento = new TasaEstacionamiento(vuelo);
-
-                            estadiaTotal.setText(String.valueOf((estadia.totalHoras())));
-                            Movimiento movimiento = new Movimiento(vuelo, estadia, tasaAterrizaje,
-                                    tasaEstacionamiento, parseDouble(cambioMoneda.getText()));
-
-                            movimiento.calcularCostos();
-
-                            precioTotalMovimiento.setText(movimiento.getMostrarPrecio());
-                            paxTotal.setText(movimiento.getMostrarCostoPax());
-
-                            precioTotalPesos.setText(movimiento.getMostrarPrecioPesos());
-                            precioTotalDolares.setText(movimiento.getMostrarPrecioDolares());
-
-
-                        }catch (ParseException ex){
-                            JOptionPane.showMessageDialog(null, "Ingrese una fecha y hora con formato DD/MM/AAAA HH:MM");
-                        }
+                        crearVueloConPax();
 
                     }else{
                         JOptionPane.showMessageDialog(null,"¡Debe completar peso de la aeronave, y cotización del dolar!");
-
                     }
                 }else{
                     JOptionPane.showMessageDialog(null, "¡La cotización no puede ser 0!");
@@ -254,6 +181,22 @@ public class App extends JFrame{
             }
         });
 
+        valoresBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JFrame ventanaValores = new JFrame(" --- Valores Generales --- ");
+                try {
+                    ventanaValores.setContentPane(new Valores().getPanelMain());
+                } catch (JAXBException ex) {
+                    ex.printStackTrace();
+                }
+                ventanaValores.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+                ventanaValores.pack();
+                ventanaValores.setLocationRelativeTo(null);
+                ventanaValores.setVisible(true);
+
+            }
+        });
     }
 
 
@@ -275,14 +218,91 @@ public class App extends JFrame{
         destCabotajeBtn.setSelected(true);
     }
 
-    public void cargarTasas(){
+    public void crearVueloSinPax(){
+        DecimalFormat df = new DecimalFormat("#0.00");
+        try {
 
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy");
+            SimpleDateFormat simpleTimeFormat = new SimpleDateFormat("HH:mm");
+
+            Date dateArribo = simpleDateFormat.parse(fechaArribo.getText());
+            Date dateDespegue = simpleDateFormat.parse(fechaDespegue.getText());
+            Date timeArribo = simpleTimeFormat.parse(horaArribo.getText());
+            Date timeDespegue = simpleTimeFormat.parse(horaDespegue.getText());
+
+            Estadia estadia = new Estadia(dateArribo, dateDespegue, timeArribo, timeDespegue);
+
+            Vuelo vuelo = new Vuelo(nroVuelo.getText(), matVuelo.getText(),
+                    parseInt(nroPax.getText()), parseInt(pesoVuelo.getText()),
+                    getProcedencia(), getDestino(), estadia);
+
+
+            TasaAterrizaje aterrizaje = new TasaAterrizaje(vuelo);
+            TasaEstacionamiento estacionamiento = new TasaEstacionamiento(vuelo);
+
+            tasaAterrizaje.setText(df.format(aterrizaje.getTasa()));
+            tasaEstacionamiento.setText(df.format(estacionamiento.getTasa()));
+            tasaFueraHorario.setText(df.format(aterrizaje.getFueraHorario()));
+
+            estadiaTotal.setText(String.valueOf((estadia.totalHoras())));
+
+            Movimiento movimiento = new Movimiento(vuelo, estadia, aterrizaje,
+                    estacionamiento, parseDouble(cambioMoneda.getText()));
+
+            movimiento.calcularCostos();
+
+
+
+
+            precioTotalMovimiento.setText(movimiento.getMostrarPrecio());
+            paxTotal.setText(movimiento.getMostrarCostoPax());
+
+            precioTotalPesos.setText(movimiento.getMostrarPrecioPesos());
+            precioTotalDolares.setText(movimiento.getMostrarPrecioDolares());
+
+        } catch (ParseException ex) {
+            JOptionPane.showMessageDialog(null, "Ingrese una fecha y hora con formato DD/MM/AAAA HH:MM");
+        }
     }
 
-    public void crearVuelo(){
-        
-    }
+    void crearVueloConPax(){
+        DecimalFormat df = new DecimalFormat("#0.00");
+        try {
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy");
+            SimpleDateFormat simpleTimeFormat = new SimpleDateFormat("HH:mm");
+            Date dateArribo = simpleDateFormat.parse(fechaArribo.getText());
+            Date dateDespegue = simpleDateFormat.parse(fechaDespegue.getText());
+            Date timeArribo = simpleTimeFormat.parse(horaArribo.getText());
+            Date timeDespegue = simpleTimeFormat.parse(horaDespegue.getText());
+            Estadia estadia = new Estadia(dateArribo, dateDespegue, timeArribo, timeDespegue);
 
+
+            Vuelo vuelo = new Vuelo(nroVuelo.getText(), matVuelo.getText(), parseInt(pesoVuelo.getText()), getProcedencia(), getDestino(), estadia);
+
+            TasaAterrizaje aterrizaje = new TasaAterrizaje(vuelo);
+            TasaEstacionamiento estacionamiento = new TasaEstacionamiento(vuelo);
+
+            tasaAterrizaje.setText(df.format(aterrizaje.getTasa()));
+            tasaEstacionamiento.setText(df.format(estacionamiento.getTasa()));
+            tasaFueraHorario.setText(df.format(aterrizaje.getFueraHorario()));
+
+            estadiaTotal.setText(String.valueOf((estadia.totalHoras())));
+            Movimiento movimiento = new Movimiento(vuelo, estadia, aterrizaje,
+                    estacionamiento, parseDouble(cambioMoneda.getText()));
+
+            movimiento.calcularCostos();
+
+            precioTotalMovimiento.setText(movimiento.getMostrarPrecio());
+            paxTotal.setText(movimiento.getMostrarCostoPax());
+
+            precioTotalPesos.setText(movimiento.getMostrarPrecioPesos());
+            precioTotalDolares.setText(movimiento.getMostrarPrecioDolares());
+
+
+        }catch (ParseException ex){
+            JOptionPane.showMessageDialog(null, "Ingrese una fecha y hora con formato DD/MM/AAAA HH:MM");
+        }
+    }
 
 
 

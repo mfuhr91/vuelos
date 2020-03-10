@@ -28,7 +28,7 @@ public class Movimiento {
         this.cambioMoneda = cambioMoneda;
     }
 
-    // Calcula costos de moviemiento
+    // Calcula costos de movimiento
     public void calcularCostos() throws ParseException {
         DecimalFormat df = new DecimalFormat("#0.00");
         if (vuelo.getProcedencia().equals("cabotaje") && vuelo.getDestino().equals("cabotaje")){ // PAX y MOV en pesos
@@ -36,40 +36,40 @@ public class Movimiento {
             precio = vuelo.getCostoAterrizaje() + (vuelo.getCostoEstacionamiento() * estadia.totalHoras());
             enPesos = precio + costoPax;
             enDolares =  enPesos/cambioMoneda;
-            mostrarPrecio = ("$" + String.valueOf(df.format(precio)));
-            mostrarCostoPax = ("$" + String.valueOf(df.format(costoPax)));
-            mostrarPrecioPesos = ("$" + String.valueOf(df.format(enPesos)));
-            mostrarPrecioDolares = ("USD" + String.valueOf(df.format(enDolares)));
+            mostrarPrecio = ("$" + df.format(precio));
+            mostrarCostoPax = ("$" + df.format(costoPax));
+            mostrarPrecioPesos = ("$" + df.format(enPesos));
+            mostrarPrecioDolares = ("USD" + df.format(enDolares));
 
         } else if (vuelo.getProcedencia().equals("internacional") && vuelo.getDestino().equals("cabotaje")) { //PAX pesos - MOV dolares
             costoPax = vuelo.getNroPax() * 140;
             precio = vuelo.getCostoAterrizaje() + (vuelo.getCostoEstacionamiento() * estadia.totalHoras());
             enDolares =  precio + (costoPax/cambioMoneda);
             enPesos = (precio*cambioMoneda) + costoPax;
-            mostrarPrecio = ("USD" + String.valueOf(df.format(precio)));
-            mostrarCostoPax = ("$" + String.valueOf(df.format(costoPax)));
-            mostrarPrecioPesos = ("$" + String.valueOf(df.format(enPesos)));
-            mostrarPrecioDolares = ("USD" + String.valueOf(df.format(enDolares)));
+            mostrarPrecio = ("USD" + df.format(precio));
+            mostrarCostoPax = ("$" + df.format(costoPax));
+            mostrarPrecioPesos = ("$" + df.format(enPesos));
+            mostrarPrecioDolares = ("USD" + df.format(enDolares));
 
         } else if (vuelo.getProcedencia().equals("cabotaje") && vuelo.getDestino().equals("internacional")) { // PAX dolares - MOV pesos
             costoPax = vuelo.getNroPax()  * 49;
             precio = vuelo.getCostoAterrizaje() + (vuelo.getCostoEstacionamiento() * estadia.totalHoras());
             enDolares =  (precio/cambioMoneda) + costoPax;
             enPesos = precio + (costoPax*cambioMoneda);
-            mostrarPrecio = ("$" + String.valueOf(df.format(precio)));
-            mostrarCostoPax = ("USD" + String.valueOf(df.format(costoPax)));
-            mostrarPrecioPesos = ("$" + String.valueOf(df.format(enPesos)));
-            mostrarPrecioDolares = ("USD" + String.valueOf(df.format(enDolares)));
+            mostrarPrecio = ("$" + df.format(precio));
+            mostrarCostoPax = ("USD" + df.format(costoPax));
+            mostrarPrecioPesos = ("$" + df.format(enPesos));
+            mostrarPrecioDolares = ("USD" + df.format(enDolares));
 
         } else if (vuelo.getProcedencia().equals("internacional") && vuelo.getDestino().equals("internacional")) { //PAX dolares - MOV dolares
             costoPax = vuelo.getNroPax() * 49;
             precio =  vuelo.getCostoAterrizaje() + (vuelo.getCostoEstacionamiento() * estadia.totalHoras());
             enDolares =  precio + costoPax;
             enPesos = enDolares*cambioMoneda;
-            mostrarPrecio = ("USD" + String.valueOf(df.format(precio)));
-            mostrarCostoPax = ("USD" + String.valueOf(df.format(costoPax)));
-            mostrarPrecioPesos = ("$" + String.valueOf(df.format(enPesos)));
-            mostrarPrecioDolares = ("USD" + String.valueOf(df.format(enDolares)));
+            mostrarPrecio = ("USD" + df.format(precio));
+            mostrarCostoPax = ("USD" + df.format(costoPax));
+            mostrarPrecioPesos = ("$" + df.format(enPesos));
+            mostrarPrecioDolares = ("USD" + df.format(enDolares));
         }
     }
 
