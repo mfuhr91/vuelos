@@ -2,23 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a2e1d731-38bc-4889-9147-e97e24870488" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vuelos/App.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vuelos/App.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vuelos/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vuelos/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vuelos/modelo/Movimiento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vuelos/modelo/Movimiento.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vuelos/modelo/TasaAterrizaje.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vuelos/modelo/TasaAterrizaje.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vuelos/modelo/TasaEstacionamiento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vuelos/modelo/TasaEstacionamiento.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/App$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/App$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/App$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/App$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/App$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/App$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/App$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/App$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/App$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/App$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/App$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/App$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/modelo/Movimiento.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/modelo/Movimiento.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/modelo/TasaAterrizaje.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/modelo/TasaAterrizaje.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/modelo/TasaEstacionamiento.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/modelo/TasaEstacionamiento.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/App$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/App$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/App$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/App$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/App$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/App$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/App$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/Valores$1.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,31 +153,31 @@
     </state>
     <state x="613" y="344" key="#com.intellij.uiDesigner.palette.ComponentItemDialog.OneOff/0.0.1440.900@0.0.1440.900" timestamp="1580580473992" />
     <state x="507" y="262" key="#com.intellij.uiDesigner.palette.ComponentItemDialog/0.0.1440.900@0.0.1440.900" timestamp="1580761809508" />
-    <state width="1398" height="284" key="GridCell.Tab.0.bottom" timestamp="1583798478259">
+    <state width="1398" height="284" key="GridCell.Tab.0.bottom" timestamp="1583798854280">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="284" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1583798478259" />
+    <state width="1398" height="284" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1583798854280" />
     <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.23.1440.825@0.0.1440.848" timestamp="1580766144195" />
-    <state width="1398" height="284" key="GridCell.Tab.0.bottom/0.23.1440.825@0.23.1440.825" timestamp="1583796721915" />
+    <state width="1398" height="284" key="GridCell.Tab.0.bottom/0.23.1440.825@0.23.1440.825" timestamp="1583798778919" />
     <state width="1398" height="80" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1583718441213" />
-    <state width="1398" height="284" key="GridCell.Tab.0.center" timestamp="1583798478257">
+    <state width="1398" height="284" key="GridCell.Tab.0.center" timestamp="1583798854278">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="284" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1583798478257" />
-    <state width="1398" height="284" key="GridCell.Tab.0.center/0.23.1440.825@0.23.1440.825" timestamp="1583796721909" />
+    <state width="1398" height="284" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1583798854278" />
+    <state width="1398" height="284" key="GridCell.Tab.0.center/0.23.1440.825@0.23.1440.825" timestamp="1583798778914" />
     <state width="1398" height="80" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1583718441211" />
-    <state width="1398" height="284" key="GridCell.Tab.0.left" timestamp="1583798478256">
+    <state width="1398" height="284" key="GridCell.Tab.0.left" timestamp="1583798854277">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="284" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1583798478256" />
+    <state width="1398" height="284" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1583798854277" />
     <state width="1398" height="199" key="GridCell.Tab.0.left/0.0.1440.900@0.23.1440.825" timestamp="1581549769859" />
-    <state width="1398" height="284" key="GridCell.Tab.0.left/0.23.1440.825@0.23.1440.825" timestamp="1583796721905" />
+    <state width="1398" height="284" key="GridCell.Tab.0.left/0.23.1440.825@0.23.1440.825" timestamp="1583798778909" />
     <state width="1398" height="80" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1583718441210" />
-    <state width="1398" height="284" key="GridCell.Tab.0.right" timestamp="1583798478258">
+    <state width="1398" height="284" key="GridCell.Tab.0.right" timestamp="1583798854279">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="284" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1583798478258" />
-    <state width="1398" height="284" key="GridCell.Tab.0.right/0.23.1440.825@0.23.1440.825" timestamp="1583796721912" />
+    <state width="1398" height="284" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1583798854279" />
+    <state width="1398" height="284" key="GridCell.Tab.0.right/0.23.1440.825@0.23.1440.825" timestamp="1583798778915" />
     <state width="1398" height="80" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1583718441212" />
     <state x="375" y="72" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1580767287298">
       <screen x="0" y="0" width="1440" height="900" />
