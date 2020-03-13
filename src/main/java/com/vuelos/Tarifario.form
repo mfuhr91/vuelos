@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.vuelos.Tarifario">
+  <grid id="27dc6" binding="panelMain" layout-manager="GridLayoutManager" row-count="20" column-count="6" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="20" left="20" bottom="20" right="20"/>
+    <constraints>
+      <xy x="20" y="20" width="583" height="716"/>
+    </constraints>
+    <properties>
+      <font name="Roboto Thin" size="16"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <component id="f9848" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="0" column="2" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Roboto Thin" size="16"/>
+          <text value="Tasas de Estacionamiento:"/>
+        </properties>
+      </component>
+      <component id="ea41d" class="javax.swing.JTextField" binding="tasaMinAteCab">
+        <constraints>
+          <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="70" height="-1"/>
+            <maximum-size width="70" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Roboto Thin" size="16"/>
+        </properties>
+      </component>
+      <component id="b77d2" class="javax.swing.JTextField" binding="menos30AteCab">
+        <constraints>
+          <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="70" height="-1"/>
+            <maximum-size width="70" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Roboto Thin" size="16"/>
+        </properties>
+      </component>
+      <component id="e5f53" class="javax.swing.JTextField" binding="de31a80AteCab">
+        <constraints>
+          <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="70" height="-1"/>
+            <maximum-size width="70" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Roboto Thin" size="16"/>
+        </properties>
+      </component>
+      <component id="3cb5f" class="javax.swing.JTextField" binding="de81a170AteCab">
+        <constraints>
+          <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="70" height="-1"/>
+            <maximum-size width="70" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Roboto Thin" size="16"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="5b679" class="javax.swing.JTextField" binding="mas170AteCab">
+        <constraints>
+          <grid row="7" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="70" height="-1"/>
+            <maximum-size width="70" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Roboto Thin" size="16"/>
+        </properties>
+      </component>
+      <component id="1d1c7" class="javax.swing.JTextField" binding="tasaMinAteInter">
+        <constraints>
+          <grid row="10" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="70" height="-1"/>
+            <maximum-size width="70" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Roboto Thin" size="16"/>
+        </properties>
+      </component>
+      <component id="71593" class="javax.swing.JTextField" binding="menos30AteInter">
+        <constraints>
+          <grid row="11" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="70" height="-1"/>
+            <maximum-size width="70" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Roboto Thin" size="16"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="d5a98" class="javax.swing.JTextField" binding="de31a80AteInter">
+        <constraints>
+          <grid row="12" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="70" height="-1"/>
+            <maximum-size width="70" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Roboto Thin" size="16"/>
+        </properties>
+      </component>
+      <component id="d39ea" class="javax.swing.JTextField" binding="de81a170AteInter">
+        <constraints>
+          <grid row="13" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="70" height="-1"/>
+            <maximum-size width="70" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Roboto Thin" size="16"/>
+        </properties>
+      </component>
+      <component id="8fe8e" class="javax.swing.JTextField" binding="mas170AteInter">
+        <constraints>
+          <grid row="14" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="70" height="-1"/>
+            <maximum-size width="70" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Roboto Thin" size="16"/>
+        </properties>
+      </component>
+      <component id="77b11" class="javax.swing.JLabel" binding="labelTasasAterrizaje">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="4" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Roboto Thin" size="16"/>
+          <text value="Tasas de Aterrizaje:"/>
+        </properties>
+      </component>
+      <component id="520a8" class="javax.swing.JLabel" binding="labelTasaMinima">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Roboto Thin" size="16"/>
+          <text value="Tasa Mínima:"/>
+        </properties>
+      </component>
+      <component id="f1cf" class="javax.swing.JLabel" binding="lblMenos30">
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Roboto Thin" size="16"/>
+          <text value="Menos de 30Tn:"/>
+        </properties>
+      </component>
+      <component id="9559e" class="javax.swing.JLabel" binding="lblDe31a80">
+        <constraints>
+          <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Roboto Thin" size="16"/>
+          <text value="De 31 a 80Tn:"/>
+        </properties>
+      </component>
+      <component id="4900b" class="javax.swing.JLabel" binding="lblDe81a170">
+        <constraints>
+          <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Roboto Thin" size="16"/>
+          <text value="De 81 a 170Tn:"/>
+        </properties>
+      </component>
+      <component id="190cc" class="javax.swing.JLabel" binding="lblMas170">
+        <constraints>
+          <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Roboto Thin" size="16"/>
+          <text value="Mas de 170Tn:"/>
+        </properties>
+      </component>
+      <component id="2e031" class="javax.swing.JLabel" binding="lblAterrizajeInternacional">
+        <constraints>
+          <grid row="9" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Roboto Thin" size="16"/>
+          <text value="Internacional:"/>
+        </properties>
+      </component>
+      <component id="c4058" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="10" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Roboto Thin" size="16"/>
+          <text value="Tasa Mínima:"/>
+        </properties>
+      </component>
+      <component id="c91df" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="11" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Roboto Thin" size="16"/>
+          <text value="Menos de 30Tn:"/>
+        </properties>
+      </component>
+      <component id="1543a" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="12" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Roboto Thin" size="16"/>
+          <text value="De 31 a 80Tn:"/>
+        </properties>
+      </component>
+      <component id="7a6" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="13" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Roboto Thin" size="16"/>
+          <text value="De 81 a 170Tn:"/>
+        </properties>
+      </component>
+      <component id="cd843" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="14" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Roboto Thin" size="16"/>
+          <text value="Mas de 170Tn:"/>
+        </properties>
+      </component>
+      <component id="e4c3d" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="2" vsize-policy="4" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <maximum-size width="100" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Roboto Thin" size="16"/>
+          <text value="Cabotaje:"/>
+        </properties>
+      </component>
+      <component id="f0231" class="javax.swing.JSeparator">
+        <constraints>
+          <grid row="8" column="0" row-span="1" col-span="2" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <foreground color="-16514044"/>
+        </properties>
+      </component>
+      <component id="2532" class="javax.swing.JSeparator">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="2" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <foreground color="-16514044"/>
+        </properties>
+      </component>
+      <component id="61b90" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="2" column="2" row-span="1" col-span="4" vsize-policy="4" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <maximum-size width="100" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Roboto Thin" size="16"/>
+          <text value="Cabotaje:"/>
+        </properties>
+      </component>
+      <component id="86cf0" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="9" column="2" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Roboto Thin" size="16"/>
+          <text value="Internacional:"/>
+        </properties>
+      </component>
+      <component id="45a48" class="javax.swing.JTextField" binding="menos5EstCab">
+        <constraints>
+          <grid row="3" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="70" height="-1"/>
+            <maximum-size width="70" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Roboto Thin" size="16"/>
+        </properties>
+      </component>
+      <component id="993b4" class="javax.swing.JTextField" binding="de5a80EstCab">
+        <constraints>
+          <grid row="4" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="70" height="-1"/>
+            <maximum-size width="70" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Roboto Thin" size="16"/>
+        </properties>
+      </component>
+      <component id="dd2fd" class="javax.swing.JTextField" binding="de81a170EstCab">
+        <constraints>
+          <grid row="5" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="70" height="-1"/>
+            <maximum-size width="70" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Roboto Thin" size="16"/>
+        </properties>
+      </component>
+      <component id="2bff4" class="javax.swing.JTextField" binding="mas170EstCab">
+        <constraints>
+          <grid row="6" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="70" height="-1"/>
+            <maximum-size width="70" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Roboto Thin" size="16"/>
+        </properties>
+      </component>
+      <component id="2fde3" class="javax.swing.JTextField" binding="menos5EstInter">
+        <constraints>
+          <grid row="10" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="70" height="-1"/>
+            <maximum-size width="70" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Roboto Thin" size="16"/>
+        </properties>
+      </component>
+      <component id="53108" class="javax.swing.JTextField" binding="de5a80EstInter">
+        <constraints>
+          <grid row="11" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="70" height="-1"/>
+            <maximum-size width="70" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Roboto Thin" size="16"/>
+        </properties>
+      </component>
+      <component id="af6a1" class="javax.swing.JTextField" binding="de81a170EstInter">
+        <constraints>
+          <grid row="12" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="70" height="-1"/>
+            <maximum-size width="70" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Roboto Thin" size="16"/>
+        </properties>
+      </component>
+      <component id="c0051" class="javax.swing.JTextField" binding="mas170EstInter">
+        <constraints>
+          <grid row="13" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="70" height="-1"/>
+            <maximum-size width="70" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Roboto Thin" size="16"/>
+        </properties>
+      </component>
+      <component id="5a0f1" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="3" column="2" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Roboto Thin" size="16"/>
+          <text value="Tasa Mínima:"/>
+        </properties>
+      </component>
+      <component id="b4f06" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="4" column="2" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Roboto Thin" size="16"/>
+          <text value="Menos de 80Tn:"/>
+        </properties>
+      </component>
+      <component id="57258" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="5" column="2" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Roboto Thin" size="16"/>
+          <text value="De 81 a 170Tn:"/>
+        </properties>
+      </component>
+      <component id="4516d" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="6" column="2" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Roboto Thin" size="16"/>
+          <text value="Mas de 170Tn:"/>
+        </properties>
+      </component>
+      <component id="768ca" class="javax.swing.JSeparator">
+        <constraints>
+          <grid row="1" column="2" row-span="1" col-span="4" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <foreground color="-16514044"/>
+        </properties>
+      </component>
+      <component id="7db22" class="javax.swing.JSeparator">
+        <constraints>
+          <grid row="8" column="2" row-span="1" col-span="4" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <foreground color="-16514044"/>
+        </properties>
+      </component>
+      <component id="9f156" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="12" column="2" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Roboto Thin" size="16"/>
+          <text value="De 81 a 170Tn:"/>
+        </properties>
+      </component>
+      <component id="34cdc" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="13" column="2" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Roboto Thin" size="16"/>
+          <text value="Mas de 170Tn:"/>
+        </properties>
+      </component>
+      <component id="5eb4c" class="javax.swing.JButton" binding="cerrarBtn">
+        <constraints>
+          <grid row="19" column="4" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="120" height="-1"/>
+            <maximum-size width="120" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <enabled value="false"/>
+          <font name="Roboto Thin" size="16"/>
+          <text value="Cerrar"/>
+        </properties>
+      </component>
+      <component id="95048" class="javax.swing.JSeparator">
+        <constraints>
+          <grid row="18" column="0" row-span="1" col-span="2" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-16514044"/>
+        </properties>
+      </component>
+      <component id="73c63" class="javax.swing.JButton" binding="actualizarBtn">
+        <constraints>
+          <grid row="19" column="2" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="120" height="-1"/>
+            <maximum-size width="120" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Roboto Thin" size="16"/>
+          <text value="Actualizar"/>
+        </properties>
+      </component>
+      <component id="64dfa" class="javax.swing.JSeparator">
+        <constraints>
+          <grid row="18" column="2" row-span="1" col-span="4" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-16514044"/>
+        </properties>
+      </component>
+      <component id="1627b" class="javax.swing.JSeparator">
+        <constraints>
+          <grid row="15" column="0" row-span="1" col-span="2" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-16514044"/>
+        </properties>
+      </component>
+      <component id="ffaaa" class="javax.swing.JSeparator">
+        <constraints>
+          <grid row="15" column="2" row-span="1" col-span="4" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-16514044"/>
+        </properties>
+      </component>
+      <component id="e3e30" class="javax.swing.JTextField" binding="fueraHorario">
+        <constraints>
+          <grid row="16" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="70" height="-1"/>
+            <maximum-size width="70" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Roboto Thin" size="16"/>
+        </properties>
+      </component>
+      <component id="72c5" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="16" column="2" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Roboto Thin" size="16"/>
+          <text value="Fuera de Horario:"/>
+        </properties>
+      </component>
+      <component id="985e5" class="javax.swing.JTextField" binding="paxCab">
+        <constraints>
+          <grid row="16" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="70" height="-1"/>
+            <maximum-size width="70" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Roboto Thin" size="16"/>
+        </properties>
+      </component>
+      <component id="ddd41" class="javax.swing.JTextField" binding="paxInter">
+        <constraints>
+          <grid row="17" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="70" height="-1"/>
+            <maximum-size width="70" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Roboto Thin" size="16"/>
+        </properties>
+      </component>
+      <component id="87dcd" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="16" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Roboto Thin" size="16"/>
+          <text value="Pasajero Cabotaje:"/>
+        </properties>
+      </component>
+      <component id="c358c" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="17" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Roboto Thin" size="16"/>
+          <text value="Pasajero Internacional:"/>
+        </properties>
+      </component>
+      <component id="8a405" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="10" column="2" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Roboto Thin" size="16"/>
+          <text value="Tasa Mínima:"/>
+        </properties>
+      </component>
+      <component id="be29a" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="11" column="2" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Roboto Thin" size="16"/>
+          <text value="Menos de 80Tn:"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>

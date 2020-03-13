@@ -1,5 +1,11 @@
 package com.vuelos.modelo;
 
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
+import javax.xml.bind.annotation.XmlType;
+
+@XmlRootElement
+@XmlType(propOrder = {"paxCab","paxInter"})
 public class Vuelo {
 
     private int id;
@@ -12,8 +18,13 @@ public class Vuelo {
     private double costoAterrizaje;
     private double costoEstacionamiento;
     private Estadia estadia;
+    private double paxCab;
+    private double paxInter;
+
+    public Vuelo(){};
 
     public Vuelo(String nroVuelo, String matricula, int peso, String procedencia, String destino, Estadia estadia) {
+
         this.nroVuelo = nroVuelo;
         this.matricula = matricula;
         this.peso = peso;
@@ -32,14 +43,17 @@ public class Vuelo {
         this.estadia = estadia;
     }
 
+    @XmlTransient
     public int getNroPax() {
         return nroPax;
     }
 
+    @XmlTransient
     public int getPeso() {
         return peso;
     }
 
+    @XmlTransient
     public double getCostoAterrizaje() {
         return costoAterrizaje;
     }
@@ -48,6 +62,7 @@ public class Vuelo {
         this.costoAterrizaje = costoAterrizaje;
     }
 
+    @XmlTransient
     public double getCostoEstacionamiento() {
         return costoEstacionamiento;
     }
@@ -56,16 +71,34 @@ public class Vuelo {
         this.costoEstacionamiento = costoEstacionamiento;
     }
 
+    @XmlTransient
     public String getProcedencia() {
         return procedencia;
     }
 
+    @XmlTransient
     public String getDestino() {
         return destino;
     }
-
+    @XmlTransient
     public Estadia getEstadia() {
         return estadia;
+    }
+
+    public double getPaxCab() {
+        return paxCab;
+    }
+
+    public void setPaxCab(double paxCab) {
+        this.paxCab = paxCab;
+    }
+
+    public double getPaxInter() {
+        return paxInter;
+    }
+
+    public void setPaxInter(double paxInter) {
+        this.paxInter = paxInter;
     }
 
     public void setEstadia(Estadia estadia) {

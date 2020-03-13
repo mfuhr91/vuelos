@@ -53,43 +53,12 @@ public class Estadia {
         return (int) Math.ceil(total);
     }
 
-    public Date getFechaArribo() {
-        return fechaArribo;
-    }
-
-    public void setFechaArribo(Date fechaArribo) {
-        this.fechaArribo = fechaArribo;
-    }
-
     public Date getHoraArribo() {
         return horaArribo;
-    }
-
-    public void setHoraArribo(Date horaArribo) {
-        this.horaArribo = horaArribo;
-    }
-
-    public Date getFechaSalida() {
-        return fechaSalida;
-    }
-
-    public void setFechaSalida(Date fechaSalida) {
-        this.fechaSalida = fechaSalida;
     }
 
     public Date getHoraSalida() {
         return horaSalida;
     }
 
-    public void setHoraSalida(Date horaSalida) {
-        this.horaSalida = horaSalida;
-    }
-
-    public double getTotal() {
-        return total;
-    }
-
-    public void setTotal(double total) {
-        this.total = total;
-    }
 }

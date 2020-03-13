@@ -5,11 +5,8 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 import javax.xml.bind.annotation.XmlType;
-import java.text.DecimalFormat;
-import java.util.Date;
 
-
-@XmlRootElement //(name="Tasas de Aterrizaje")
+@XmlRootElement
 @XmlType(propOrder = {"tasaMinimaCab","menosDe30tnCab","de31a80tnCab","de81a170tnCab","mas170tnCab","tasaMinimaInter","menosDe30tnInter","de31a80tnInter",
 "de81a170tnInter","mas170tnInter","fueraHorario"})
 public class TasaAterrizaje {
@@ -125,9 +122,11 @@ public class TasaAterrizaje {
     public double getTasaMinimaCab() {
         return tasaMinimaCab;
     }
+
     public void setTasaMinimaCab(double tasaMinimaCab) {
         this.tasaMinimaCab = tasaMinimaCab;
     }
+
     @XmlElement
     public double getMenosDe30tnCab() {
         return menosDe30tnCab;
@@ -136,6 +135,7 @@ public class TasaAterrizaje {
     public void setMenosDe30tnCab(double menosDe30tnCab) {
         this.menosDe30tnCab = menosDe30tnCab;
     }
+
     @XmlElement
     public double getDe31a80tnCab() {
         return de31a80tnCab;
@@ -144,6 +144,7 @@ public class TasaAterrizaje {
     public void setDe31a80tnCab(double de31a80tnCab) {
         this.de31a80tnCab = de31a80tnCab;
     }
+
     @XmlElement
     public double getDe81a170tnCab() {
         return de81a170tnCab;
@@ -152,6 +153,7 @@ public class TasaAterrizaje {
     public void setDe81a170tnCab(double de81a170tnCab) {
         this.de81a170tnCab = de81a170tnCab;
     }
+
     @XmlElement
     public double getMas170tnCab() {
         return mas170tnCab;
@@ -160,6 +162,7 @@ public class TasaAterrizaje {
     public void setMas170tnCab(double mas170tnCab) {
         this.mas170tnCab = mas170tnCab;
     }
+
     @XmlElement
     public double getTasaMinimaInter() {
         return tasaMinimaInter;
@@ -168,6 +171,7 @@ public class TasaAterrizaje {
     public void setTasaMinimaInter(double tasaMinimaInter) {
         this.tasaMinimaInter = tasaMinimaInter;
     }
+
     @XmlElement
     public double getMenosDe30tnInter() {
         return menosDe30tnInter;
@@ -176,6 +180,7 @@ public class TasaAterrizaje {
     public void setMenosDe30tnInter(double menosDe30tnInter) {
         this.menosDe30tnInter = menosDe30tnInter;
     }
+
     @XmlElement
     public double getDe31a80tnInter() {
         return de31a80tnInter;
@@ -184,6 +189,7 @@ public class TasaAterrizaje {
     public void setDe31a80tnInter(double de31a80tnInter) {
         this.de31a80tnInter = de31a80tnInter;
     }
+
     @XmlElement
     public double getDe81a170tnInter() {
         return de81a170tnInter;
@@ -192,6 +198,7 @@ public class TasaAterrizaje {
     public void setDe81a170tnInter(double de81a170tnInter) {
         this.de81a170tnInter = de81a170tnInter;
     }
+
     @XmlElement
     public double getMas170tnInter() {
         return mas170tnInter;
@@ -200,6 +207,7 @@ public class TasaAterrizaje {
     public void setMas170tnInter(double mas170tnInter) {
         this.mas170tnInter = mas170tnInter;
     }
+
     @XmlElement
     public double getFueraHorario() {
         return fueraHorario;
@@ -208,6 +216,7 @@ public class TasaAterrizaje {
     public void setFueraHorario(double fueraHorario) {
         this.fueraHorario = fueraHorario;
     }
+
     @XmlTransient
     public double getTasa() {
         return tasa;
