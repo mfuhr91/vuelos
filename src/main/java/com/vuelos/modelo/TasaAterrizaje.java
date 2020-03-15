@@ -31,6 +31,7 @@ public class TasaAterrizaje {
     }
 
     public TasaAterrizaje(Vuelo vuelo) throws JAXBException {
+        System.out.println("Se cargan valores en nuevo Aterrizaje");
         TasaAterrizaje aterrizaje = Persistencia.cargarAterrizaje();
         if(vuelo.getProcedencia().equals("cabotaje")){
 

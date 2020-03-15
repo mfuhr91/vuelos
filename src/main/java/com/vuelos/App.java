@@ -1,5 +1,6 @@
 package com.vuelos;
 
+import com.sun.xml.bind.v2.runtime.output.SAXOutput;
 import com.vuelos.modelo.*;
 
 import javax.swing.*;
@@ -73,24 +74,8 @@ public class App extends JFrame {
     private String procedencia;
     private String destino;
 
-    public String getDestino() {
-        return destino;
-    }
 
-    public void setDestino(String destino) {
-        this.destino = destino;
-    }
-
-    public String getProcedencia() {
-        return procedencia;
-    }
-
-    public void setProcedencia(String procedencia) {
-        this.procedencia = procedencia;
-    }
     public App() throws JAXBException {
-
-        //this.setSize(new Dimension(900, 700));
 
         cargarDatos();
 
@@ -101,7 +86,7 @@ public class App extends JFrame {
                     if (!pesoVuelo.getText().isEmpty()
                             && !cambioMoneda.getText().isEmpty()
                             && !nroPax.getText().isEmpty()) {
-                        crearVuelo();
+                        crearMovimiento();
                     } else {
                         JOptionPane.showMessageDialog(null,
                                 "¡Debe completar peso de la aeronave y cotización del dolar!");
@@ -173,22 +158,7 @@ public class App extends JFrame {
             }
         });
 
-        tarifasBtn.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                JFrame ventanaTarifario = new JFrame("Tarifario General");
-                try {
-                    ventanaTarifario.setContentPane(new Tarifario().getPanelMain());
-                } catch (JAXBException ex) {
-                    ex.printStackTrace();
-                }
-                ventanaTarifario.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-                ventanaTarifario.pack();
-                ventanaTarifario.setLocationRelativeTo(null);
-                ventanaTarifario.setVisible(true);
-            }
 
-        });
         salirBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -271,6 +241,24 @@ public class App extends JFrame {
                 }
             }
         });
+
+        tarifasBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JFrame ventanaTarifario = new JFrame("Tarifario General");
+                try {
+                    ventanaTarifario.setContentPane(new Tarifario().getPanelMain());
+                } catch (JAXBException ex) {
+                    ex.printStackTrace();
+                }
+                ventanaTarifario.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+                ventanaTarifario.pack();
+                ventanaTarifario.setLocationRelativeTo(null);
+                ventanaTarifario.setVisible(true);
+            }
+
+        });
+
         balizaBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -280,6 +268,8 @@ public class App extends JFrame {
                 ventanaBalizamiento.pack();
                 ventanaBalizamiento.setLocationRelativeTo(null);
                 ventanaBalizamiento.setVisible(true);
+
+
             }
         });
     }
@@ -317,7 +307,7 @@ public class App extends JFrame {
         return estadia;
     }
 
-    void crearVuelo() {
+    void crearMovimiento() {
         try {
             crearEstadia();
             try {
@@ -327,7 +317,11 @@ public class App extends JFrame {
 
                 TasaAterrizaje aterrizaje = new TasaAterrizaje(vuelo);
                 TasaEstacionamiento estacionamiento = new TasaEstacionamiento(vuelo);
+
+                System.out.println("Se asigno Valor Pax Cabotaje");
                 vuelo.setPaxCab(Persistencia.cargarValoresPax().getPaxCab());
+
+                System.out.println("Se asigno Valor Pax Internacional");
                 vuelo.setPaxInter(Persistencia.cargarValoresPax().getPaxInter());
 
                 estadiaTotal.setText(String.valueOf((crearEstadia().totalHoras())));
@@ -363,5 +357,21 @@ public class App extends JFrame {
     public void cerrarVentana() {
     }
 
+
+    public String getDestino() {
+        return destino;
+    }
+
+    public void setDestino(String destino) {
+        this.destino = destino;
+    }
+
+    public String getProcedencia() {
+        return procedencia;
+    }
+
+    public void setProcedencia(String procedencia) {
+        this.procedencia = procedencia;
+    }
 
 }

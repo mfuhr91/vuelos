@@ -37,49 +37,34 @@ public class Movimiento {
 
         DecimalFormat df = new DecimalFormat("0.00");
         if (vuelo.getProcedencia().equals("cabotaje") && vuelo.getDestino().equals("cabotaje")){ // PAX y MOV en pesos
-            costoPax = vuelo.getNroPax() * vuelo.getPaxCab();
+
             costoPistaCab();
-            /*
-            if((vuelo.getCostoEstacionamiento() * estadia.totalHoras()) <= estacionamiento.getTasaMinimaCab()){
-                precio = vuelo.getCostoAterrizaje() + (estacionamiento.getTasaMinimaCab());
-                setTasa(estacionamiento.getTasaMinimaCab());
-                estacionamiento.setTasa(getTasa());
-                setSubTotalCostoAterrizaje(vuelo.getCostoAterrizaje());
-                setSubTotalCostoEstacionamiento(estacionamiento.getTasaMinimaCab());
-            }else {
-                precio = vuelo.getCostoAterrizaje() + (vuelo.getCostoEstacionamiento() * estadia.totalHoras());
-                setSubTotalCostoAterrizaje(vuelo.getCostoAterrizaje());
-                setSubTotalCostoEstacionamiento((vuelo.getCostoEstacionamiento() * estadia.totalHoras()));
-                setTasa(estacionamiento.asignarCosto(vuelo));
 
-
-            }
-
-             */
-                //setTasa(estacionamiento.getTasa());
-                enPesos = precio + costoPax;
-                enDolares = enPesos / cambioMoneda;
-                mostrarPrecio = ("AR$" + df.format(precio));
-                mostrarCostoPax = ("AR$" + df.format(costoPax));
-                mostrarPrecioPesos = ("AR$" + df.format(enPesos));
-                mostrarPrecioDolares = ("USD" + df.format(enDolares));
+            costoPax = vuelo.getNroPax() * vuelo.getPaxCab();
+            enPesos = precio + costoPax;
+            enDolares = enPesos / cambioMoneda;
+            mostrarPrecio = ("AR$" + df.format(precio));
+            mostrarCostoPax = ("AR$" + df.format(costoPax));
+            mostrarPrecioPesos = ("AR$" + df.format(enPesos));
+            mostrarPrecioDolares = ("USD" + df.format(enDolares));
 
         } else if (vuelo.getProcedencia().equals("internacional") && vuelo.getDestino().equals("cabotaje")) { //PAX pesos - MOV dolares
-            costoPax = vuelo.getNroPax() * vuelo.getPaxCab();
+
             costoPistaInter();
 
-                enDolares = precio + (costoPax / cambioMoneda);
-                enPesos = (precio * cambioMoneda) + costoPax;
-                mostrarPrecio = ("USD" + df.format(precio));
-                mostrarCostoPax = ("AR$" + df.format(costoPax));
-                mostrarPrecioPesos = ("AR$" + df.format(enPesos));
-                mostrarPrecioDolares = ("USD" + df.format(enDolares));
+            costoPax = vuelo.getNroPax() * vuelo.getPaxCab();
+            enDolares = precio + (costoPax / cambioMoneda);
+            enPesos = (precio * cambioMoneda) + costoPax;
+            mostrarPrecio = ("USD" + df.format(precio));
+            mostrarCostoPax = ("AR$" + df.format(costoPax));
+            mostrarPrecioPesos = ("AR$" + df.format(enPesos));
+            mostrarPrecioDolares = ("USD" + df.format(enDolares));
 
         } else if (vuelo.getProcedencia().equals("cabotaje") && vuelo.getDestino().equals("internacional")) { // PAX dolares - MOV pesos
-            costoPax = vuelo.getNroPax()  * vuelo.getPaxInter();
 
             costoPistaCab();
 
+            costoPax = vuelo.getNroPax()  * vuelo.getPaxInter();
             enDolares =  (precio/cambioMoneda) + costoPax;
             enPesos = precio + (costoPax*cambioMoneda);
             mostrarPrecio = ("AR$" + df.format(precio));
@@ -88,10 +73,10 @@ public class Movimiento {
             mostrarPrecioDolares = ("USD" + df.format(enDolares));
 
         } else if (vuelo.getProcedencia().equals("internacional") && vuelo.getDestino().equals("internacional")) { //PAX dolares - MOV dolares
-            costoPax = vuelo.getNroPax() * vuelo.getPaxInter();
 
             costoPistaInter();
 
+            costoPax = vuelo.getNroPax() * vuelo.getPaxInter();
             enDolares =  precio + costoPax;
             enPesos = enDolares*cambioMoneda;
             mostrarPrecio = ("USD" + df.format(precio));
@@ -102,6 +87,7 @@ public class Movimiento {
     }
 
     public void costoPistaCab() throws ParseException {
+        System.out.println("Se carga estacionamiento en nuevo Movimiento");
         TasaEstacionamiento estacionamiento = Persistencia.cargarEstacionamiento();
         if((vuelo.getCostoEstacionamiento() * estadia.totalHoras()) <= estacionamiento.getTasaMinimaCab()){
             precio = vuelo.getCostoAterrizaje() + (estacionamiento.getTasaMinimaCab());
@@ -118,6 +104,7 @@ public class Movimiento {
     }
 
     public void costoPistaInter() throws ParseException {
+        System.out.println("Se carga estacionamiento en nuevo Movimiento");
         TasaEstacionamiento estacionamiento = Persistencia.cargarEstacionamiento();
         if((vuelo.getCostoEstacionamiento() * estadia.totalHoras()) <= estacionamiento.getTasaMinimaInter()){
             precio = vuelo.getCostoAterrizaje() + (estacionamiento.getTasaMinimaInter());

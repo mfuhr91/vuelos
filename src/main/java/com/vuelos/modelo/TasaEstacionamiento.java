@@ -30,6 +30,7 @@ public class TasaEstacionamiento {
     }
 
     public double asignarCosto(Vuelo vuelo){
+        System.out.println("Se cargan valores en nuevo Estacionamiento");
         TasaEstacionamiento estacionamiento = Persistencia.cargarEstacionamiento();
         if(vuelo.getProcedencia().equals("cabotaje")){
             setTasaMinimaCab(estacionamiento.getTasaMinimaCab());
