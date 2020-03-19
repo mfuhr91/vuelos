@@ -2,6 +2,7 @@ package com.vuelos;
 
 import com.sun.xml.bind.v2.runtime.output.SAXOutput;
 import com.vuelos.modelo.*;
+import com.vuelos.vistas.Balizamiento;
 
 import javax.swing.*;
 import javax.xml.bind.JAXBException;
@@ -89,10 +90,13 @@ public class App extends JFrame {
                         crearMovimiento();
                     } else {
                         JOptionPane.showMessageDialog(null,
-                                "¡Debe completar peso de la aeronave y cotización del dolar!");
+                                "¡Debe completar peso de la aeronave y cotización del dolar!","Atención",
+                                JOptionPane.INFORMATION_MESSAGE,new ImageIcon("alerta.png"));
                     }
                 } else {
-                    JOptionPane.showMessageDialog(null, "¡La cotización no puede ser 0!");
+                    JOptionPane.showMessageDialog(null,
+                            "¡La cotización no puede ser 0!","Atención",
+                            JOptionPane.INFORMATION_MESSAGE,new ImageIcon("alerta.png"));
                 }
             }
 
@@ -263,12 +267,12 @@ public class App extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 JFrame ventanaBalizamiento = new JFrame("Salida y Puesta del Sol");
-                ventanaBalizamiento.setContentPane(new Balizamiento().getPanelMain());
+                //ventanaBalizamiento.setContentPane(new Balizamiento.getPanelMain());
                 ventanaBalizamiento.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
                 ventanaBalizamiento.pack();
                 ventanaBalizamiento.setLocationRelativeTo(null);
                 ventanaBalizamiento.setVisible(true);
-
+                ventanaBalizamiento.add(panelMain);
 
             }
         });
@@ -344,12 +348,15 @@ public class App extends JFrame {
                 subTotalBalizamiento.setText(df.format(movimiento.getSubTotalCostoBalizamiento()));
 
             }catch(NumberFormatException e){
-                JOptionPane.showMessageDialog(null, "¡El nro de pasajeros no puede contener decimales!");
-
+                JOptionPane.showMessageDialog(null,
+                        "¡El nro de pasajeros no puede contener decimales!","Atención",
+                        JOptionPane.INFORMATION_MESSAGE,new ImageIcon("alerta.png"));
             }
 
         }catch (ParseException | JAXBException ex) {
-            JOptionPane.showMessageDialog(null, "Ingrese una fecha y hora con formato DD/MM/AAAA HH:MM");
+            JOptionPane.showMessageDialog(null,
+                    "Ingrese el formato 'DD/MM/AAAA' para la fecha y 'HH:MM' para la hora!","Error",
+                    JOptionPane.INFORMATION_MESSAGE,new ImageIcon("error.png"));
         }
     }
 

@@ -7,17 +7,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a2e1d731-38bc-4889-9147-e97e24870488" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/vuelos_aiuma/tasas_estacionamiento.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/vuelos_aiuma/tasas_estacionamiento.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dependency-reduced-pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dependency-reduced-pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/vuelos_aiuma/vuelos.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/vuelos_aiuma/vuelos.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/salidas_puestas_sol.xml" beforeDir="false" afterPath="$PROJECT_DIR$/salidas_puestas_sol.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/vuelos/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vuelos/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vuelos/Balizamiento.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vuelos/Balizamiento.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vuelos/Balizamiento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vuelos/Balizamiento.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vuelos/modelo/Movimiento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vuelos/modelo/Movimiento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vuelos/Balizamiento.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vuelos/Balizamiento.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vuelos/Tarifario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vuelos/Tarifario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vuelos/modelo/Inicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vuelos/Inicio.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/vuelos/modelo/Persistencia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vuelos/modelo/Persistencia.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vuelos/modelo/TasaAterrizaje.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vuelos/modelo/TasaAterrizaje.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vuelos/modelo/TasaEstacionamiento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vuelos/modelo/TasaEstacionamiento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vuelos/modelo/SalidasPuestasDelSol.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vuelos/modelo/SalidasPuestasDelSol.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/App$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/App$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/App$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/App$10.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/App$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/App$11.class" afterDir="false" />
@@ -34,11 +34,15 @@
       <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/App$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/App$8.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/App$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/App$9.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/Balizamiento.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/Balizamiento.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/modelo/Movimiento.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/modelo/Movimiento.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/Balizamiento.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/Tarifario$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/Tarifario$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/Tarifario$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/Tarifario$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/Tarifario.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/Tarifario.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/modelo/Inicio.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/modelo/Persistencia.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/modelo/Persistencia.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/modelo/TasaAterrizaje.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/modelo/TasaAterrizaje.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/modelo/TasaEstacionamiento.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/modelo/TasaEstacionamiento.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/modelo/SalidasPuestasDelSol.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/modelo/SalidasPuestasDelSol.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flat-plane.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flat-plane.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +86,7 @@
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW" value="true" />
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH" value="192" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW" value="true" />
-    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="279" />
+    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="292" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/vuelos" />
@@ -99,13 +103,13 @@
     <property name="settings.editor.selected.configurable" value="project.propCompiler" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/java/com/vuelos" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/main/java/com/vuelos" />
       <recent name="$PROJECT_DIR$/src/main/java/com/vuelos/recursos" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/vuelos" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -151,11 +155,11 @@
       </method>
     </configuration>
     <configuration name="Inicio" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.vuelos.modelo.Inicio" />
+      <option name="MAIN_CLASS_NAME" value="com.vuelos.Inicio" />
       <module name="vuelos" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.vuelos.modelo.*" />
+          <option name="PATTERN" value="com.vuelos.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -166,7 +170,6 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Inicio" />
-        <item itemvalue="Application.App (1)" />
         <item itemvalue="Application.App" />
       </list>
     </recent_temporary>
@@ -188,6 +191,7 @@
       <workItem from="1583705889467" duration="404000" />
       <workItem from="1583707629573" duration="363000" />
       <workItem from="1583926282912" duration="75138000" />
+      <workItem from="1584631472291" duration="10176000" />
     </task>
     <servers />
   </component>
@@ -203,14 +207,14 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="320" y="115" key="#Project_Structure/0.0.1440.900@0.0.1440.900" timestamp="1583972911618" />
-    <state x="458" y="223" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1584309136526">
+    <state x="458" y="223" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1584457824258">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="458" y="223" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1440.900@0.0.1440.900" timestamp="1584309136526" />
-    <state x="706" y="282" key="#com.intellij.ide.util.MemberChooser" timestamp="1584307805400">
+    <state x="458" y="223" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1440.900@0.0.1440.900" timestamp="1584457824258" />
+    <state x="706" y="282" key="#com.intellij.ide.util.MemberChooser" timestamp="1584641565930">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="706" y="282" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1584307805400" />
+    <state x="706" y="282" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1584641565930" />
     <state x="457" y="241" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1584023633037">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -223,48 +227,52 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="408" y="193" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1440.900@0.0.1440.900" timestamp="1583703240388" />
-    <state x="34" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1584044923406">
+    <state x="34" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1584324580686">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="34" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1440.900@0.0.1440.900" timestamp="1584044923406" />
-    <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1584309348006">
+    <state x="34" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1440.900@0.0.1440.900" timestamp="1584324580685" />
+    <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1584561303469">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1584309348006" />
-    <state x="507" y="262" key="#com.intellij.uiDesigner.palette.ComponentItemDialog" timestamp="1580761809508">
+    <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1584561303469" />
+    <state x="507" y="262" key="#com.intellij.uiDesigner.palette.ComponentItemDialog" timestamp="1584400474488">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="613" y="344" key="#com.intellij.uiDesigner.palette.ComponentItemDialog.OneOff" timestamp="1580580473992">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="613" y="344" key="#com.intellij.uiDesigner.palette.ComponentItemDialog.OneOff/0.0.1440.900@0.0.1440.900" timestamp="1580580473992" />
-    <state x="507" y="262" key="#com.intellij.uiDesigner.palette.ComponentItemDialog/0.0.1440.900@0.0.1440.900" timestamp="1580761809508" />
-    <state width="1398" height="229" key="GridCell.Tab.0.bottom" timestamp="1584312947488">
-      <screen x="0" y="23" width="1440" height="825" />
+    <state x="507" y="262" key="#com.intellij.uiDesigner.palette.ComponentItemDialog/0.0.1440.900@0.0.1440.900" timestamp="1584400474488" />
+    <state width="1398" height="183" key="GridCell.Tab.0.bottom" timestamp="1584642283449">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="229" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1584312105292" />
+    <state width="1398" height="183" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1584642283449" />
     <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.23.1440.825@0.0.1440.848" timestamp="1580766144195" />
-    <state width="1398" height="229" key="GridCell.Tab.0.bottom/0.23.1440.825@0.23.1440.825" timestamp="1584312947488" />
-    <state width="1398" height="80" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1583718441213" />
-    <state width="1398" height="229" key="GridCell.Tab.0.center" timestamp="1584312947484">
-      <screen x="0" y="23" width="1440" height="825" />
+    <state width="1398" height="183" key="GridCell.Tab.0.bottom/0.23.1440.825@0.23.1440.825" timestamp="1584641598220" />
+    <state width="1398" height="183" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1584635373054" />
+    <state width="1398" height="183" key="GridCell.Tab.0.center" timestamp="1584642283446">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="229" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1584312105290" />
-    <state width="1398" height="229" key="GridCell.Tab.0.center/0.23.1440.825@0.23.1440.825" timestamp="1584312947484" />
-    <state width="1398" height="80" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1583718441211" />
-    <state width="1398" height="229" key="GridCell.Tab.0.left" timestamp="1584312947481">
-      <screen x="0" y="23" width="1440" height="825" />
+    <state width="1398" height="183" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1584642283446" />
+    <state width="1398" height="183" key="GridCell.Tab.0.center/0.23.1440.825@0.23.1440.825" timestamp="1584641598218" />
+    <state width="1398" height="183" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1584635373052" />
+    <state width="1398" height="183" key="GridCell.Tab.0.left" timestamp="1584642283445">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="229" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1584312105285" />
+    <state width="1398" height="183" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1584642283445" />
     <state width="1398" height="199" key="GridCell.Tab.0.left/0.0.1440.900@0.23.1440.825" timestamp="1581549769859" />
-    <state width="1398" height="229" key="GridCell.Tab.0.left/0.23.1440.825@0.23.1440.825" timestamp="1584312947481" />
-    <state width="1398" height="80" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1583718441210" />
-    <state width="1398" height="229" key="GridCell.Tab.0.right" timestamp="1584312947486">
-      <screen x="0" y="23" width="1440" height="825" />
+    <state width="1398" height="183" key="GridCell.Tab.0.left/0.23.1440.825@0.23.1440.825" timestamp="1584641598217" />
+    <state width="1398" height="183" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1584635373050" />
+    <state width="1398" height="183" key="GridCell.Tab.0.right" timestamp="1584642283447">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="229" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1584312105291" />
-    <state width="1398" height="229" key="GridCell.Tab.0.right/0.23.1440.825@0.23.1440.825" timestamp="1584312947486" />
-    <state width="1398" height="80" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1583718441212" />
+    <state width="1398" height="183" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1584642283447" />
+    <state width="1398" height="183" key="GridCell.Tab.0.right/0.23.1440.825@0.23.1440.825" timestamp="1584641598219" />
+    <state width="1398" height="183" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1584635373053" />
+    <state x="388" y="172" key="GuiDesigner.FormSource.Dialog" timestamp="1584401170871">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="388" y="172" key="GuiDesigner.FormSource.Dialog/0.0.1440.900@0.0.1440.900" timestamp="1584401170871" />
     <state x="229" y="23" width="1024" height="825" key="SettingsEditor" timestamp="1584024090686">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -274,36 +282,98 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="375" y="72" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1440.900@0.0.1440.900" timestamp="1580767287298" />
-    <state x="495" y="338" key="com.intellij.uiDesigner.propertyInspector.editors.string.StringEditorDialog" timestamp="1584306157144">
+    <state x="495" y="338" key="com.intellij.uiDesigner.propertyInspector.editors.string.StringEditorDialog" timestamp="1584401296616">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="495" y="338" key="com.intellij.uiDesigner.propertyInspector.editors.string.StringEditorDialog/0.0.1440.900@0.0.1440.900" timestamp="1584306157144" />
+    <state x="495" y="338" key="com.intellij.uiDesigner.propertyInspector.editors.string.StringEditorDialog/0.0.1440.900@0.0.1440.900" timestamp="1584401296616" />
     <state x="458" y="234" key="extract.method.dialog" timestamp="1583933319149">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="458" y="234" key="extract.method.dialog/0.0.1440.900@0.0.1440.900" timestamp="1583933319149" />
-    <state width="416" height="194" key="javadoc.popup.new" timestamp="1584311903760">
+    <state width="1440" height="215" key="javadoc.popup" timestamp="1584401342556">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="416" height="194" key="javadoc.popup.new/0.0.1440.900@0.0.1440.900" timestamp="1584311903760" />
-    <state width="416" height="194" key="javadoc.popup.new/0.23.1440.825@0.23.1440.825" timestamp="1584306924356" />
+    <state width="458" height="280" key="javadoc.popup.new" timestamp="1584642184585">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="458" height="280" key="javadoc.popup.new/0.0.1440.900@0.0.1440.900" timestamp="1584642184585" />
+    <state width="458" height="280" key="javadoc.popup.new/0.23.1440.825@0.23.1440.825" timestamp="1584639779898" />
+    <state width="1440" height="215" key="javadoc.popup/0.0.1440.900@0.0.1440.900" timestamp="1584401342556" />
     <state x="385" y="204" width="670" height="737" key="run.anything.popup" timestamp="1583970663719">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="385" y="204" width="670" height="737" key="run.anything.popup/0.0.1440.900@0.0.1440.900" timestamp="1583970663719" />
     <state x="385" y="204" width="670" height="737" key="run.anything.popup/0.23.1440.825@0.23.1440.825" timestamp="1583967772801" />
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1584305805496">
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1584641026252">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1584305805496" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1584641026252" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/vuelos/Tarifario.java</url>
-          <line>62</line>
+          <line>65</line>
           <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/vuelos/Inicio.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="62" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/vuelos/modelo/Persistencia.java</url>
+          <line>184</line>
+          <option name="timeStamp" value="64" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/vuelos/modelo/Persistencia.java</url>
+          <line>195</line>
+          <option name="timeStamp" value="66" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/vuelos/modelo/Persistencia.java</url>
+          <line>200</line>
+          <option name="timeStamp" value="68" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/vuelos/vistas/Balizamiento.java</url>
+          <line>251</line>
+          <option name="timeStamp" value="77" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/vuelos/vistas/Balizamiento.java</url>
+          <line>252</line>
+          <option name="timeStamp" value="79" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/vuelos/vistas/Balizamiento.java</url>
+          <line>253</line>
+          <option name="timeStamp" value="80" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/vuelos/vistas/Balizamiento.java</url>
+          <line>254</line>
+          <option name="timeStamp" value="81" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/vuelos/vistas/Balizamiento.java</url>
+          <line>255</line>
+          <option name="timeStamp" value="82" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/vuelos/vistas/Balizamiento.java</url>
+          <line>256</line>
+          <option name="timeStamp" value="83" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/vuelos/modelo/Persistencia.java</url>
+          <line>180</line>
+          <properties class="com.vuelos.modelo.Persistencia" method="guardarSalidasPuestasDelSol">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="63" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

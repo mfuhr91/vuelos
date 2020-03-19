@@ -61,7 +61,7 @@
               <transformers>
                 <transformer>
                   <manifestEntries>
-                    <Main-Class>com.vuelos.modelo.Inicio</Main-Class>
+                    <Main-Class>com.vuelos.Inicio</Main-Class>
                   </manifestEntries>
                 </transformer>
                 <transformer />
