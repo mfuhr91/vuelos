@@ -8,6 +8,10 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 
+/**
+ * Clase que se encarga de la Persistencia de los datos.
+ *
+ */
 public class Persistencia {
 
     private static String archivoAterrizaje = "tasas_aterrizaje.xml";
@@ -18,7 +22,9 @@ public class Persistencia {
 
     public Persistencia(){};
 
-
+    /**
+     * metodo que crea el Archivo "tasas_aterrizaje.xml" vacio en caso que no se encuentre
+     */
     public static void crearTasaAterizajeXML(){
         try{
             //CONTEXTO
@@ -50,6 +56,9 @@ public class Persistencia {
         }
     }
 
+    /**
+     * metodo que crea el Archivo "tasas_estacionamiento.xml" vacio en caso que no se encuentre
+     */
     public static void crearTasaEstacionamientoXML(){
         try{
             //CONTEXTO
@@ -81,6 +90,9 @@ public class Persistencia {
         }
     }
 
+    /**
+     * metodo que crea el Archivo "valores_pax.xml" vacio en caso que no se encuentre
+     */
     public static void crearValoresPaxXML(){
         try{
             //CONTEXTO
@@ -112,10 +124,13 @@ public class Persistencia {
         }
     }
 
+    /**
+     * metodo que crea el Archivo "salidas_puestas_sol.xml" vacio en caso que no se encuentre
+     */
     public static void crearSalidaPuestaDelSolXML(){
         try{
             //CONTEXTO
-            JAXBContext contexto = JAXBContext.newInstance(SalidasPuestasDelSol.class);
+            JAXBContext contexto = JAXBContext.newInstance(Balizamiento.class);
 
             // Realiza la conversión de los Objetos a XML
             Marshaller marshaller = contexto.createMarshaller();
@@ -129,9 +144,10 @@ public class Persistencia {
             System.out.println("--------------------------------------");
 
             // crear el archivo
-            SalidasPuestasDelSol salidasPuestasDelSol = new SalidasPuestasDelSol();
+            Balizamiento balizamiento = new Balizamiento();
+            //SalidasPuestasDelSol salidasPuestasDelSol = new SalidasPuestasDelSol();
 
-            marshaller.marshal(salidasPuestasDelSol,
+            marshaller.marshal(balizamiento,
                     new File(archivo.getAbsolutePath() + "/" + archivoBal));
 
         } catch (PropertyException e) {
@@ -143,6 +159,15 @@ public class Persistencia {
         }
     }
 
+    /**
+     * metodo que guarda los datos de la ventana Tarifario General:
+     *  - Tasas de aterrizaje
+     *  - Tasas de Estacionamiento
+     *  - Valores de tasas de Pax
+     * @param aterrizaje
+     * @param estacionamiento
+     * @param vuelo
+     */
     public static void guardarDatos(TasaAterrizaje aterrizaje, TasaEstacionamiento estacionamiento,Vuelo vuelo) {
         try {
 
@@ -178,6 +203,10 @@ public class Persistencia {
         }
     }
 
+    /**
+     * metodo que guarda los datos de la ventana Salidas y Puestas del Sol
+     * @param balizamiento
+     */
     public static void guardarSalidasPuestasDelSol(Balizamiento balizamiento){
         try {
 
@@ -209,6 +238,11 @@ public class Persistencia {
         }
     }
 
+
+    /**
+     * metodo que carga los valores de Aterrizaje al abrir la ventana Tarifario General
+     * @return objeto TasaAterrizaje
+     */
     public static TasaAterrizaje cargarAterrizaje(){
         try{
             //CONTEXTO
@@ -232,7 +266,8 @@ public class Persistencia {
             int confirm = JOptionPane.showConfirmDialog(null, "El archivo '" + archivoAterrizaje +
                             "' no se encuentra en la carpeta de la aplicación, " +
                             "¿Desea crear el archivo con las variables vacías, o prefiere buscarlo y ponerlo en la carpeta usted mismo?",
-                    "Atención", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE, new ImageIcon("error.png"));
+                    "Atención", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE,
+                    new ImageIcon(Persistencia.class.getResource("/error.png")));
             if (confirm == 0) { // Yes en Ventana Emergente
                 crearTasaAterizajeXML();
             } else {
@@ -243,6 +278,10 @@ public class Persistencia {
         return cargarAterrizaje();
     }
 
+    /**
+     * metodo que carga los valores de Estacionamiento al abrir la ventana Tarifario General
+     * @return objeto TasaEstacionamiento
+     */
     public static TasaEstacionamiento cargarEstacionamiento() {
         try{
             //CONTEXTO
@@ -267,7 +306,8 @@ public class Persistencia {
             int confirm = JOptionPane.showConfirmDialog(null, "El archivo '" + archivoEstacionamiento +
                             "' no se encuentra en la carpeta de la aplicación, " +
                             "¿Desea crear el archivo con las variables vacías, o prefiere buscarlo y ponerlo en la carpeta usted mismo?",
-                    "Atención", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE, new ImageIcon("error.png"));
+                    "Atención", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE,
+                    new ImageIcon(Persistencia.class.getResource("/error.png")));
             if (confirm == 0) { // Yes en Ventana Emergente
                 crearTasaEstacionamientoXML();
             } else {
@@ -277,6 +317,10 @@ public class Persistencia {
         return cargarEstacionamiento();
     }
 
+    /**
+     * metodo que carga los valores de tasas de pasajeros al abrir la ventana Tarifario General
+     * @return objeto Vuelo
+     */
     public static Vuelo cargarValoresPax(){
         try{
             //CONTEXTO
@@ -301,7 +345,8 @@ public class Persistencia {
             int confirm = JOptionPane.showConfirmDialog(null, "El archivo '" + archivoPax +
                             "' no se encuentra en la carpeta de la aplicación, " +
                             "¿Desea crear el archivo con las variables vacías, o prefiere buscarlo y ponerlo en la carpeta usted mismo?",
-                    "Atención", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE, new ImageIcon("error.png"));
+                    "Atención", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE,
+                    new ImageIcon(Persistencia.class.getResource("/error.png")));
             if (confirm == 0) { // Yes en Ventana Emergente
                 crearValoresPaxXML();
             } else {
@@ -311,6 +356,10 @@ public class Persistencia {
         return cargarValoresPax();
     }
 
+    /**
+     * metodo que carga los datos al abrir la ventana Salidas y Puestas del Sol
+     * @return objeto Balizamiento
+     */
     public static Balizamiento cargarBalizamiento(){
         try{
             //CONTEXTO
@@ -335,7 +384,8 @@ public class Persistencia {
             int confirm = JOptionPane.showConfirmDialog(null, "El archivo '" + archivoBal +
                             "' no se encuentra en la carpeta de la aplicación, " +
                             "¿Desea crear el archivo con las variables vacías, o prefiere buscarlo y ponerlo en la carpeta usted mismo?",
-                    "Atención", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE, new ImageIcon("error.png"));
+                    "Atención", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE,
+                    new ImageIcon(Persistencia.class.getResource("/error.png")));
             if (confirm == 0) { // Yes en Ventana Emergente
                 crearSalidaPuestaDelSolXML();
             } else {

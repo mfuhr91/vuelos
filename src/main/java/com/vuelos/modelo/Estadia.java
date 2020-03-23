@@ -61,4 +61,11 @@ public class Estadia {
         return horaSalida;
     }
 
+    public Date getFechaArribo() {
+        return fechaArribo;
+    }
+
+    public Date getFechaSalida() {
+        return fechaSalida;
+    }
 }

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tasaAterrizaje>
+    <tasaMinimaCab>14.1</tasaMinimaCab>
+    <menosDe30tnCab>1.05</menosDe30tnCab>
+    <de31a80tnCab>1.14</de31a80tnCab>
+    <de81a170tnCab>1.26</de81a170tnCab>
+    <mas170tnCab>1.47</mas170tnCab>
+    <tasaMinimaInter>20.0</tasaMinimaInter>
+    <menosDe30tnInter>4.62</menosDe30tnInter>
+    <de31a80tnInter>5.28</de31a80tnInter>
+    <de81a170tnInter>6.49</de81a170tnInter>
+    <mas170tnInter>7.19</mas170tnInter>
+    <fueraHorario>260.0</fueraHorario>
+    <tasaBalizamiento>0.0</tasaBalizamiento>
+</tasaAterrizaje>

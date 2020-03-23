@@ -3,9 +3,11 @@ package com.vuelos.modelo;
 import java.text.DecimalFormat;
 import java.text.ParseException;
 
+/**
+ * Clase perteneciente al objeto movimiento
+ */
 public class Movimiento {
 
-    private int nroMovimiento;
     private Vuelo vuelo;
     private Estadia estadia;
     private double cambioMoneda;
@@ -17,12 +19,9 @@ public class Movimiento {
     private String mostrarCostoPax;
     private String mostrarPrecioDolares;
     private String mostrarPrecioPesos;
-    private double costoAterrizaje;
-    private double costoEstacionamiento;
     private double tasa;
     private double subTotalCostoAterrizaje;
     private double subTotalCostoEstacionamiento;
-    private double subTotalCostoBalizamiento;
 
 
 
@@ -32,7 +31,10 @@ public class Movimiento {
         this.cambioMoneda = cambioMoneda;
     }
 
-    // Calcula costos de movimiento
+    /**
+     * Calcula costos de movimiento de aeronave
+     * @throws ParseException
+     */
     public void calcularCostos() throws ParseException {
 
         DecimalFormat df = new DecimalFormat("0.00");
@@ -86,6 +88,10 @@ public class Movimiento {
         }
     }
 
+    /**
+     * Calcula Costo de Estacionamiento de vuelo con procedencia cabotaje
+     * @throws ParseException
+     */
     public void costoPistaCab() throws ParseException {
         System.out.println("Se carga estacionamiento en nuevo Movimiento");
         TasaEstacionamiento estacionamiento = Persistencia.cargarEstacionamiento();
@@ -103,6 +109,10 @@ public class Movimiento {
         }
     }
 
+    /**
+     * Calcula Costo de Estacionamiento de vuelo con procedencia internacional
+     * @throws ParseException
+     */
     public void costoPistaInter() throws ParseException {
         System.out.println("Se carga estacionamiento en nuevo Movimiento");
         TasaEstacionamiento estacionamiento = Persistencia.cargarEstacionamiento();
@@ -111,7 +121,7 @@ public class Movimiento {
             setTasa(estacionamiento.getTasaMinimaInter());
             estacionamiento.setTasa(getTasa());
             setSubTotalCostoAterrizaje(vuelo.getCostoAterrizaje());
-            setSubTotalCostoEstacionamiento(estacionamiento.getTasaMinimaCab());
+            setSubTotalCostoEstacionamiento(estacionamiento.getTasaMinimaInter());
         }else {
             precio = vuelo.getCostoAterrizaje() + (vuelo.getCostoEstacionamiento() * estadia.totalHoras());
             setSubTotalCostoAterrizaje(vuelo.getCostoAterrizaje());
@@ -120,84 +130,20 @@ public class Movimiento {
         }
     }
 
-    public int getNroMovimiento() {
-        return nroMovimiento;
-    }
-
-    public void setNroMovimiento(int nroMovimiento) {
-        this.nroMovimiento = nroMovimiento;
-    }
-
-    public Vuelo getVuelo() {
-        return vuelo;
-    }
-
-    public void setVuelo(Vuelo vuelo) {
-        this.vuelo = vuelo;
-    }
-
-    public Estadia getEstadia() {
-        return estadia;
-    }
-
-    public void setEstadia(Estadia estadia) {
-        this.estadia = estadia;
-    }
-
-    public double getPrecio() {
-        return precio;
-    }
-
-    public void setPrecio(double precio) {
-        this.precio = precio;
-    }
-
-    public double getCostoPax() {
-        return costoPax;
-    }
-
-    public void setCostoPax(double costoPax) {
-        this.costoPax = costoPax;
-    }
-
-    public double getCambioMoneda() {
-        return cambioMoneda;
-    }
-
-    public void setCambioMoneda(double cambioMoneda) {
-        this.cambioMoneda = cambioMoneda;
-    }
-
     public String getMostrarPrecio() {
         return mostrarPrecio;
-    }
-
-    public void setMostrarPrecio(String mostrarPrecio) {
-        this.mostrarPrecio = mostrarPrecio;
     }
 
     public String getMostrarCostoPax() {
         return mostrarCostoPax;
     }
 
-    public void setMostrarCostoPax(String mostrarCostoPax) {
-        this.mostrarCostoPax = mostrarCostoPax;
-    }
-
     public String getMostrarPrecioDolares() {
         return mostrarPrecioDolares;
     }
 
-    public void setMostrarPrecioDolares(String mostrarPrecioDolares) {
-        this.mostrarPrecioDolares = mostrarPrecioDolares;
-    }
-
     public String getMostrarPrecioPesos() {
         return mostrarPrecioPesos;
-    }
-
-    public void setMostrarPrecioPesos(String mostrarPrecioPesos) {
-        this.mostrarPrecioPesos = mostrarPrecioPesos;
     }
 
     public double getTasa() {
@@ -206,10 +152,6 @@ public class Movimiento {
 
     public void setTasa(double tasa) {
         this.tasa = tasa;
-    }
-
-    public double getSubTotalCostoAterrizaje() {
-        return subTotalCostoAterrizaje;
     }
 
     public void setSubTotalCostoAterrizaje(double subTotalCostoAterrizaje) {
@@ -224,11 +166,4 @@ public class Movimiento {
         this.subTotalCostoEstacionamiento = subTotalCostoEstacionamiento;
     }
 
-    public double getSubTotalCostoBalizamiento() {
-        return subTotalCostoBalizamiento;
-    }
-
-    public void setSubTotalCostoBalizamiento(double subTotalCostoBalizamiento) {
-        this.subTotalCostoBalizamiento = subTotalCostoBalizamiento;
-    }
 }

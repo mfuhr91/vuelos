@@ -1,18 +1,26 @@
 package com.vuelos.modelo;
 
+import com.vuelos.vistas.Balizamiento;
+
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 import javax.xml.bind.annotation.XmlType;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
 
+/**
+ * Clase que pertenece al calculo del costo de aterrizaje de la aeronave
+ */
 @XmlRootElement
-@XmlType(propOrder = {"tasaMinimaCab","menosDe30tnCab","de31a80tnCab","de81a170tnCab","mas170tnCab","tasaMinimaInter","menosDe30tnInter","de31a80tnInter",
-"de81a170tnInter","mas170tnInter","fueraHorario"})
+@XmlType(propOrder = {"tasaMinimaCab","menosDe30tnCab","de31a80tnCab","de81a170tnCab","mas170tnCab",
+        "tasaMinimaInter","menosDe30tnInter","de31a80tnInter","de81a170tnInter","mas170tnInter",
+        "fueraHorario","horaApertura","horaCierre","tasaBalizamiento","inviernoDesde","inviernoHasta",
+        "tasaInviernoCab","tasaInviernoInter"})
 public class TasaAterrizaje {
 
-    private Vuelo vuelo;
-    private String procedencia;
     private double tasaMinimaCab;
     private double menosDe30tnCab;
     private double de31a80tnCab;
@@ -24,20 +32,66 @@ public class TasaAterrizaje {
     private double de81a170tnInter;
     private double mas170tnInter;
     private double fueraHorario;
+    private Date horaApertura;
+    private Date horaCierre;
+    private double tasaBalizamiento;
+    private Date inviernoDesde;
+    private Date inviernoHasta;
+    private double tasaInviernoCab;
+    private double tasaInviernoInter;
+    private double labelTasaInvernal;
     private double subTotal;
+    private double total;
     private double tasa;
+    private Date salidaSol;
+    private Date puestaSol;
+    private Date fechaDesde;
+    private Date fechaHasta;
+
 
     public TasaAterrizaje(){
     }
 
+
     public TasaAterrizaje(Vuelo vuelo) throws JAXBException {
         System.out.println("Se cargan valores en nuevo Aterrizaje");
         TasaAterrizaje aterrizaje = Persistencia.cargarAterrizaje();
-        if(vuelo.getProcedencia().equals("cabotaje")){
+        ArrayList<SalidasPuestasDelSol> fila = Persistencia.cargarBalizamiento().getSalidasPuestasDelSol();
 
-            if ((vuelo.getEstadia().getHoraArribo().getTime() <= 36000000)              // 10 horas = 7:00 hora en Argentina
-                    || (vuelo.getEstadia().getHoraSalida().getTime() >= 93600000)) {    // 26hs = 23:00 hora en Argentina
-                fueraHorario = aterrizaje.getFueraHorario();
+        for (SalidasPuestasDelSol sps : fila) {
+            salidaSol = sps.getSalidaSol();
+            puestaSol = sps.getPuestaSol();
+            fechaDesde = sps.getFechaDesde();
+            fechaHasta = sps.getFechaHasta();
+        }
+
+        // SE ASIGNA EL PORCENTAJE DE TASA DE BALIZAMIENTO EN CASO DE SER NECESARIO
+        if(vuelo.getEstadia().getFechaArribo().before(fechaDesde) ||
+                vuelo.getEstadia().getFechaArribo().after(fechaHasta) ||
+                vuelo.getEstadia().getHoraArribo().before(salidaSol) ||
+                vuelo.getEstadia().getHoraArribo().after(puestaSol) ||
+                vuelo.getEstadia().getHoraArribo().equals(puestaSol)){
+            tasaBalizamiento = Double.parseDouble(String.format("1.%d", Math.round(aterrizaje.getTasaBalizamiento())));
+            System.out.println("CUMPLE CONDICIONES");
+        }else{
+            tasaBalizamiento = 1.0;
+        }
+
+        // SE ASIGNA EL COSTO FUERA DE HORARIO EN CASO DE SER NECESARIO
+        if (vuelo.getEstadia().getHoraArribo().before(aterrizaje.getHoraApertura())
+                || vuelo.getEstadia().getHoraSalida().after(aterrizaje.getHoraCierre())
+                || vuelo.getEstadia().getHoraSalida().equals(aterrizaje.getHoraCierre())) {
+            fueraHorario = aterrizaje.getFueraHorario();
+        }
+
+        // EN CASO DE SER CABOTAJE, SE ASIGNAN LOS VALOES EN PESOS
+        if(vuelo.getProcedencia().equals("cabotaje")){
+            // SE ASIGNA EL COSO DE TASA INVERNAL EN CASO DE SER NECESARIO
+            if(vuelo.getEstadia().getFechaArribo().after(aterrizaje.getInviernoDesde()) ||
+                    vuelo.getEstadia().getFechaArribo().equals(aterrizaje.getInviernoDesde()) ||
+                    vuelo.getEstadia().getFechaArribo().before(aterrizaje.getInviernoHasta())){
+                tasaInviernoCab = aterrizaje.getTasaInviernoCab();
+                labelTasaInvernal = tasaInviernoCab;
             }
 
             setTasaMinimaCab(aterrizaje.getTasaMinimaCab());
@@ -46,34 +100,43 @@ public class TasaAterrizaje {
             setDe81a170tnCab(aterrizaje.getDe81a170tnCab());
             setMas170tnCab(aterrizaje.getMas170tnCab());
 
-
-
-
             if(vuelo.getPeso() < 30.00){
                 subTotal = vuelo.getPeso() * menosDe30tnCab;
                 if(subTotal <= tasaMinimaCab){
-                    vuelo.setCostoAterrizaje(tasaMinimaCab+fueraHorario);
+                    subTotal = tasaMinimaCab;
+                    total = (tasaMinimaCab * tasaBalizamiento) + fueraHorario + tasaInviernoCab;
+                    vuelo.setCostoAterrizaje(total);
                     tasa = tasaMinimaCab;
                 }else{
-                    vuelo.setCostoAterrizaje(vuelo.getPeso() * (menosDe30tnCab+fueraHorario));
+                    subTotal = vuelo.getPeso() * menosDe30tnCab;
+                    total = (subTotal * tasaBalizamiento) + fueraHorario + tasaInviernoCab;
+                    vuelo.setCostoAterrizaje(total);
                     tasa = menosDe30tnCab;
                 }
             }else if(vuelo.getPeso()  >= 31.00 && vuelo.getPeso() < 80.00){
-                vuelo.setCostoAterrizaje(vuelo.getPeso() * (de31a80tnCab+fueraHorario));
+                subTotal = vuelo.getPeso() * de31a80tnCab;
+                total = (subTotal * tasaBalizamiento) + fueraHorario + tasaInviernoCab;
+                vuelo.setCostoAterrizaje(total);
                 tasa = de31a80tnCab;
             }else if(vuelo.getPeso() >= 81.00 && vuelo.getPeso() < 170.00){
-                vuelo.setCostoAterrizaje(vuelo.getPeso() * (de81a170tnCab+fueraHorario));
+                subTotal = vuelo.getPeso() * de81a170tnCab;
+                total = (subTotal * tasaBalizamiento) + fueraHorario + tasaInviernoCab;
+                vuelo.setCostoAterrizaje(total);
                 tasa = de81a170tnCab;
             }else if(vuelo.getPeso() >= 170.00){
-                vuelo.setCostoAterrizaje(vuelo.getPeso() * (mas170tnCab+fueraHorario));
+                subTotal = vuelo.getPeso() * mas170tnCab;
+                total = (subTotal * tasaBalizamiento) + fueraHorario + tasaInviernoCab;
+                vuelo.setCostoAterrizaje(total);
                 tasa = mas170tnCab;
             }
 
+            // EN CASO DE SER INTERNACIONAL, SE ASIGNAN LOS VALOES EN DOLARES
         }else{
-
-            if ((vuelo.getEstadia().getHoraArribo().getTime() <= 36000000)              // 10 horas = 7:00 hora en Argentina
-                    || (vuelo.getEstadia().getHoraSalida().getTime() >= 93600000)) {    // 26hs = 23:00 hora en Argentina
-                fueraHorario = aterrizaje.getFueraHorario();
+            if(vuelo.getEstadia().getFechaArribo().after(aterrizaje.getInviernoDesde()) ||
+                    vuelo.getEstadia().getFechaArribo().equals(aterrizaje.getInviernoDesde()) ||
+                    vuelo.getEstadia().getFechaArribo().before(aterrizaje.getInviernoHasta())){
+                tasaInviernoInter = aterrizaje.getTasaInviernoInter();
+                labelTasaInvernal = tasaInviernoInter;
             }
 
             setTasaMinimaInter(aterrizaje.getTasaMinimaInter());
@@ -85,40 +148,35 @@ public class TasaAterrizaje {
             if(vuelo.getPeso() < 30.00){
                 subTotal = vuelo.getPeso() * menosDe30tnInter;
                 if(subTotal <= tasaMinimaInter){
-                    vuelo.setCostoAterrizaje(tasaMinimaInter+fueraHorario);
+                    subTotal = tasaMinimaInter;
+                    total = (subTotal * tasaBalizamiento) + fueraHorario + tasaInviernoInter;
+                    vuelo.setCostoAterrizaje(total);
                     tasa = tasaMinimaInter;
                 }else{
-                    vuelo.setCostoAterrizaje(vuelo.getPeso() * (menosDe30tnInter+fueraHorario));
+                    subTotal = vuelo.getPeso() * menosDe30tnInter;
+                    total = (subTotal *tasaBalizamiento) + fueraHorario + tasaInviernoInter;
+                    vuelo.setCostoAterrizaje(total);
                     tasa = menosDe30tnInter;
                 }
             }else if(vuelo.getPeso() >= 31.00 && vuelo.getPeso() < 80.00){
-                vuelo.setCostoAterrizaje(vuelo.getPeso() * de31a80tnInter);
+                subTotal = vuelo.getPeso() * de31a80tnInter;
+                total = (subTotal * tasaBalizamiento) + fueraHorario + tasaInviernoInter;
+                vuelo.setCostoAterrizaje(total);
                 tasa = de31a80tnInter;
             }else if(vuelo.getPeso() >= 81.00 && vuelo.getPeso() < 170.00){
-                vuelo.setCostoAterrizaje(vuelo.getPeso() * de81a170tnInter);
+                subTotal = vuelo.getPeso() * de81a170tnInter;
+                total = (subTotal * tasaBalizamiento) + fueraHorario + tasaInviernoInter;
+                vuelo.setCostoAterrizaje(total);
                 tasa = de81a170tnInter;
             }else if(vuelo.getPeso() >= 170.00){
-                vuelo.setCostoAterrizaje(vuelo.getPeso() * mas170tnInter);
+                subTotal = vuelo.getPeso() * mas170tnInter;
+                total = (subTotal * tasaBalizamiento) + fueraHorario + tasaInviernoInter;
+                vuelo.setCostoAterrizaje(total);
                 tasa = mas170tnInter;
             }
         }
     }
-    @XmlTransient
-    public Vuelo getVuelo() {
-        return vuelo;
-    }
 
-    public void setVuelo(Vuelo vuelo) {
-        this.vuelo = vuelo;
-    }
-    @XmlTransient
-    public String getProcedencia() {
-        return procedencia;
-    }
-
-    public void setProcedencia(String procedencia) {
-        this.procedencia = procedencia;
-    }
     @XmlElement
     public double getTasaMinimaCab() {
         return tasaMinimaCab;
@@ -223,7 +281,68 @@ public class TasaAterrizaje {
         return tasa;
     }
 
-    public void setTasa(double tasa) {
-        this.tasa = tasa;
+    public double getTasaBalizamiento() {
+        return tasaBalizamiento;
+    }
+
+    public void setTasaBalizamiento(double tasaBalizamiento) {
+        this.tasaBalizamiento = tasaBalizamiento;
+    }
+
+    @XmlTransient
+    public double getSubTotal() {
+        return subTotal;
+    }
+
+    public Date getHoraApertura() {
+        return horaApertura;
+    }
+
+    public void setHoraApertura(Date horaApertura) {
+        this.horaApertura = horaApertura;
+    }
+
+    public Date getHoraCierre() {
+        return horaCierre;
+    }
+
+    public void setHoraCierre(Date horaCierre) {
+        this.horaCierre = horaCierre;
+    }
+
+    public Date getInviernoDesde() {
+        return inviernoDesde;
+    }
+
+    public void setInviernoDesde(Date inviernoDesde) {
+        this.inviernoDesde = inviernoDesde;
+    }
+
+    public Date getInviernoHasta() {
+        return inviernoHasta;
+    }
+
+    public void setInviernoHasta(Date inviernoHasta) {
+        this.inviernoHasta = inviernoHasta;
+    }
+
+    public double getTasaInviernoCab() {
+        return tasaInviernoCab;
+    }
+
+    public void setTasaInviernoCab(double tasaInviernoCab) {
+        this.tasaInviernoCab = tasaInviernoCab;
+    }
+
+    public double getTasaInviernoInter() {
+        return tasaInviernoInter;
+    }
+
+    public void setTasaInviernoInter(double tasaInviernoInter) {
+        this.tasaInviernoInter = tasaInviernoInter;
+    }
+    @XmlTransient
+    public double getLabelTasaInvernal() {
+        return labelTasaInvernal;
     }
 }

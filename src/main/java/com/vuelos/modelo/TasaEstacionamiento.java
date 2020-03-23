@@ -5,6 +5,9 @@ import javax.xml.bind.annotation.XmlTransient;
 import javax.xml.bind.annotation.XmlType;
 import java.text.ParseException;
 
+/**
+ * Clase que pertenece  al calculo de la Tasa de Estacionamiento de la aeronave
+ */
 @XmlRootElement //(name="Tarifario de Estacionamiento")
 @XmlType(propOrder = {"tasaMinimaCab","menos80tnCab","de81a170tnCab","mas170tnCab","tasaMinimaInter","menos80tnInter",
         "de81a170tnInter","mas170tnInter",})
@@ -25,13 +28,21 @@ public class TasaEstacionamiento {
     public TasaEstacionamiento(){
 
     }
+
     public TasaEstacionamiento(Vuelo vuelo) throws ParseException {
         asignarCosto(vuelo);
     }
 
+    /**
+     * metodo que asigna los costos correspondiente a la tasa de estacionamiento
+     * segun el peso de la aeronave
+     * @param vuelo
+     * @return tasa
+     */
     public double asignarCosto(Vuelo vuelo){
         System.out.println("Se cargan valores en nuevo Estacionamiento");
         TasaEstacionamiento estacionamiento = Persistencia.cargarEstacionamiento();
+        // EN CASO DE SER CABOTAJE, SE ASIGNAN LOS VALORES EN PESOS
         if(vuelo.getProcedencia().equals("cabotaje")){
             setTasaMinimaCab(estacionamiento.getTasaMinimaCab());
             setMenos80tnCab(estacionamiento.getMenos80tnCab());
@@ -49,6 +60,7 @@ public class TasaEstacionamiento {
                 tasa = mas170tnCab;
             }
 
+            // EN CASO DE SER INTERNACIONAL, SE ASIGNAN LOS VALORES EN DOLARES
         }else{
             setTasaMinimaInter(estacionamiento.getTasaMinimaInter());
             setMenos80tnInter(estacionamiento.getMenos80tnInter());
@@ -132,11 +144,6 @@ public class TasaEstacionamiento {
 
     public void setMenos80tnInter(double menos80tnInter) {
         this.menos80tnInter = menos80tnInter;
-    }
-
-    @XmlTransient
-    public double getTasa() {
-        return tasa;
     }
 
     public void setTasa(double tasa) {
