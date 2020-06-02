@@ -20,7 +20,7 @@ public class Persistencia {
     private static String archivoBal = "salidas_puestas_sol.xml";
 
 
-    public Persistencia(){};
+    public Persistencia(){}
 
     /**
      * metodo que crea el Archivo "tasas_aterrizaje.xml" vacio en caso que no se encuentre

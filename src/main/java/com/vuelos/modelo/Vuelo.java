@@ -21,7 +21,7 @@ public class Vuelo {
     private double paxCab;
     private double paxInter;
 
-    public Vuelo(){};
+    public Vuelo(){}
 
     public Vuelo(String nroVuelo, String matricula, int peso, String procedencia, String destino, Estadia estadia) {
 

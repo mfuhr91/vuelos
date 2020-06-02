@@ -50,11 +50,7 @@ public class Balizamiento {
     public void mostrarVentana(){
         modeloTabla = new DefaultTableModel(null,columnas){
           public boolean isCellEditable(int fila, int columna){
-            if(columna == 0){
-                return false;
-            }else{
-                return true;
-            }
+              return columna != 0;
           }
 
         };

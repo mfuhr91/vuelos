@@ -63,20 +63,20 @@ public class TasaAterrizaje {
             puestaSol = sps.getPuestaSol();
             fechaDesde = sps.getFechaDesde();
             fechaHasta = sps.getFechaHasta();
+            // SE ASIGNA EL PORCENTAJE DE TASA DE BALIZAMIENTO EN CASO DE SER NECESARIO
+            if(     vuelo.getEstadia().getFechaArribo().after(fechaDesde) &&
+                    vuelo.getEstadia().getFechaArribo().before(fechaHasta)){
+                if(     vuelo.getEstadia().getHoraArribo().before(salidaSol) ||
+                        vuelo.getEstadia().getHoraArribo().after(puestaSol) ||
+                        vuelo.getEstadia().getHoraArribo().equals(puestaSol)){
+                tasaBalizamiento = Double.parseDouble(String.format("1.%d", Math.round(aterrizaje.getTasaBalizamiento())));
+                System.out.println("CUMPLE CONDICIONES");
+                break;
+                }
+            }else{
+                tasaBalizamiento = 1.0;
+            }
         }
-
-        // SE ASIGNA EL PORCENTAJE DE TASA DE BALIZAMIENTO EN CASO DE SER NECESARIO
-        if(vuelo.getEstadia().getFechaArribo().before(fechaDesde) ||
-                vuelo.getEstadia().getFechaArribo().after(fechaHasta) ||
-                vuelo.getEstadia().getHoraArribo().before(salidaSol) ||
-                vuelo.getEstadia().getHoraArribo().after(puestaSol) ||
-                vuelo.getEstadia().getHoraArribo().equals(puestaSol)){
-            tasaBalizamiento = Double.parseDouble(String.format("1.%d", Math.round(aterrizaje.getTasaBalizamiento())));
-            System.out.println("CUMPLE CONDICIONES");
-        }else{
-            tasaBalizamiento = 1.0;
-        }
-
         // SE ASIGNA EL COSTO FUERA DE HORARIO EN CASO DE SER NECESARIO
         if (vuelo.getEstadia().getHoraArribo().before(aterrizaje.getHoraApertura())
                 || vuelo.getEstadia().getHoraSalida().after(aterrizaje.getHoraCierre())
@@ -130,7 +130,7 @@ public class TasaAterrizaje {
                 tasa = mas170tnCab;
             }
 
-            // EN CASO DE SER INTERNACIONAL, SE ASIGNAN LOS VALOES EN DOLARES
+            // EN CASO DE SER INTERNACIONAL, SE ASIGNAN LOS VALORES EN DOLARES
         }else{
             if(vuelo.getEstadia().getFechaArribo().after(aterrizaje.getInviernoDesde()) ||
                     vuelo.getEstadia().getFechaArribo().equals(aterrizaje.getInviernoDesde()) ||

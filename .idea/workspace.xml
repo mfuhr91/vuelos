@@ -7,40 +7,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a2e1d731-38bc-4889-9147-e97e24870488" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/vuelos_jar.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/vuelos_aiuma/vuelos.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/vuelos_aiuma/vuelos.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Copia de tasas_aterrizaje.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dependency-reduced-pom.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/vuelos/modelo/Persistencia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vuelos/modelo/Persistencia.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vuelos/vistas/App.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vuelos/vistas/App.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vuelos/vistas/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vuelos/vistas/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vuelos/modelo/TasaAterrizaje.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vuelos/modelo/TasaAterrizaje.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vuelos/modelo/Vuelo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vuelos/modelo/Vuelo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/vuelos/vistas/Balizamiento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vuelos/vistas/Balizamiento.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vuelos/vistas/Tarifario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vuelos/vistas/Tarifario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/alerta.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/modelo/Persistencia.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/modelo/Persistencia.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/App$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/App$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/App$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/App$10.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/App$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/App$11.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/App$12.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/App$12.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/App$13.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/App$13.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/App$14.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/App$14.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/App$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/App$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/App$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/App$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/App$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/App$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/App$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/App$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/App$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/App$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/App$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/App$7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/App$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/App$8.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/App$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/App$9.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/modelo/TasaAterrizaje.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/modelo/TasaAterrizaje.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/Balizamiento$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/Balizamiento$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/Balizamiento$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/Balizamiento$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/Balizamiento$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/Balizamiento$3.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/Balizamiento$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/Balizamiento$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/Balizamiento$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/Balizamiento$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/Balizamiento$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/Balizamiento$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/Balizamiento$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/Balizamiento$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/Balizamiento$ColumnRenderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/Balizamiento$ColumnRenderer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/Balizamiento$Renderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/Balizamiento$Renderer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/Balizamiento.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/Balizamiento.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/Tarifario$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/Tarifario$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/error.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/flat-plane.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/flat-plane.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ok.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,6 +83,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.42413792" />
     <property name="restartRequiresConfirmation" value="false" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
   <component name="RecentsManager">
@@ -241,29 +227,33 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="458" y="222" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1440.900@0.0.1440.900" timestamp="1584818912972" />
-    <state width="1398" height="183" key="GridCell.Tab.0.bottom" timestamp="1591108064843">
+    <state x="472" y="294" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1591131937451">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="183" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1591108064843" />
-    <state width="1398" height="183" key="GridCell.Tab.0.bottom/0.23.1440.825@0.23.1440.825" timestamp="1591104647489" />
+    <state x="472" y="294" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1440.900@0.0.1440.900" timestamp="1591131937451" />
+    <state width="1398" height="153" key="GridCell.Tab.0.bottom" timestamp="1591132147065">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="153" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1591132147065" />
+    <state width="1398" height="153" key="GridCell.Tab.0.bottom/0.23.1440.825@0.23.1440.825" timestamp="1591132033153" />
     <state width="1398" height="183" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1584635373054" />
-    <state width="1398" height="183" key="GridCell.Tab.0.center" timestamp="1591108064841">
+    <state width="1398" height="153" key="GridCell.Tab.0.center" timestamp="1591132147062">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="183" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1591108064841" />
-    <state width="1398" height="183" key="GridCell.Tab.0.center/0.23.1440.825@0.23.1440.825" timestamp="1591104647479" />
+    <state width="1398" height="153" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1591132147062" />
+    <state width="1398" height="153" key="GridCell.Tab.0.center/0.23.1440.825@0.23.1440.825" timestamp="1591132033150" />
     <state width="1398" height="183" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1584635373052" />
-    <state width="1398" height="183" key="GridCell.Tab.0.left" timestamp="1591108064840">
+    <state width="1398" height="153" key="GridCell.Tab.0.left" timestamp="1591132147061">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="183" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1591108064840" />
-    <state width="1398" height="183" key="GridCell.Tab.0.left/0.23.1440.825@0.23.1440.825" timestamp="1591104647470" />
+    <state width="1398" height="153" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1591132147061" />
+    <state width="1398" height="153" key="GridCell.Tab.0.left/0.23.1440.825@0.23.1440.825" timestamp="1591132033146" />
     <state width="1398" height="183" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1584635373050" />
-    <state width="1398" height="183" key="GridCell.Tab.0.right" timestamp="1591108064842">
+    <state width="1398" height="153" key="GridCell.Tab.0.right" timestamp="1591132147064">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="183" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1591108064842" />
-    <state width="1398" height="183" key="GridCell.Tab.0.right/0.23.1440.825@0.23.1440.825" timestamp="1591104647481" />
+    <state width="1398" height="153" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1591132147064" />
+    <state width="1398" height="153" key="GridCell.Tab.0.right/0.23.1440.825@0.23.1440.825" timestamp="1591132033152" />
     <state width="1398" height="183" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1584635373053" />
     <state x="388" y="172" key="GuiDesigner.FormSource.Dialog" timestamp="1584401170871">
       <screen x="0" y="0" width="1440" height="900" />
@@ -289,10 +279,10 @@
     <state width="1440" height="215" key="javadoc.popup" timestamp="1584401342556">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="458" height="118" key="javadoc.popup.new" timestamp="1591028070984">
+    <state width="458" height="118" key="javadoc.popup.new" timestamp="1591131197987">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="458" height="118" key="javadoc.popup.new/0.0.1440.900@0.0.1440.900" timestamp="1591028070984" />
+    <state width="458" height="118" key="javadoc.popup.new/0.0.1440.900@0.0.1440.900" timestamp="1591131197987" />
     <state width="458" height="118" key="javadoc.popup.new/0.23.1440.825@0.23.1440.825" timestamp="1584813203367" />
     <state width="1440" height="215" key="javadoc.popup/0.0.1440.900@0.0.1440.900" timestamp="1584401342556" />
     <state x="385" y="204" width="670" height="737" key="run.anything.popup" timestamp="1583970663719">
