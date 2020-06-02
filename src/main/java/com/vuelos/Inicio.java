@@ -15,6 +15,7 @@ public class Inicio {
     public static void main(String[] args) throws JAXBException {
 
         JFrame ventanaApp = new JFrame("Vuelos AIUMA");
+        ventanaApp.setIconImage(new ImageIcon(Inicio.class.getResource("/plane.png")).getImage());
         ventanaApp.setContentPane(new App().getPanelMain());
         ventanaApp.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         ventanaApp.pack();
