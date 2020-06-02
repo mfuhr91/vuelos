@@ -555,8 +555,8 @@
       <component id="c39a8" class="javax.swing.JButton" binding="limpiarBtn">
         <constraints>
           <grid row="17" column="9" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="2" use-parent-layout="false">
-            <preferred-size width="150" height="35"/>
-            <maximum-size width="150" height="35"/>
+            <preferred-size width="170" height="35"/>
+            <maximum-size width="170" height="35"/>
           </grid>
         </constraints>
         <properties>
@@ -567,8 +567,8 @@
       <component id="c1c30" class="javax.swing.JButton" binding="balizaBtn">
         <constraints>
           <grid row="17" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="1" use-parent-layout="false">
-            <preferred-size width="-1" height="35"/>
-            <maximum-size width="-1" height="35"/>
+            <preferred-size width="240" height="35"/>
+            <maximum-size width="240" height="35"/>
           </grid>
         </constraints>
         <properties>
@@ -592,8 +592,8 @@
       <component id="d817a" class="javax.swing.JButton" binding="calcularBtn">
         <constraints>
           <grid row="17" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="2" use-parent-layout="false">
-            <preferred-size width="150" height="35"/>
-            <maximum-size width="150" height="35"/>
+            <preferred-size width="170" height="35"/>
+            <maximum-size width="170" height="35"/>
           </grid>
         </constraints>
         <properties>

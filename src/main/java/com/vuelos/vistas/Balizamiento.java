@@ -105,8 +105,8 @@ public class Balizamiento {
         formato.insets = margenAgregarBoton;
         formato.anchor = GridBagConstraints.SOUTHEAST;
         agregarFilaBtn.setFont(fuente);
-        agregarFilaBtn.setPreferredSize(new Dimension(70,35));
-        agregarFilaBtn.setMaximumSize(new Dimension(70,35));
+        agregarFilaBtn.setPreferredSize(new Dimension(75,35));
+        agregarFilaBtn.setMaximumSize(new Dimension(75,35));
         panelMain.add(agregarFilaBtn,formato);
 
         JButton borrarFilaBtn = new JButton("- Fila");
@@ -118,8 +118,8 @@ public class Balizamiento {
         formato.insets = margenAgregarBoton;
         formato.anchor = GridBagConstraints.SOUTHEAST;
         borrarFilaBtn.setFont(fuente);
-        borrarFilaBtn.setPreferredSize(new Dimension(70,35));
-        borrarFilaBtn.setMaximumSize(new Dimension(70,35));
+        borrarFilaBtn.setPreferredSize(new Dimension(75,35));
+        borrarFilaBtn.setMaximumSize(new Dimension(75,35));
         panelMain.add(borrarFilaBtn,formato);
 
         JSeparator separator = new JSeparator();
@@ -185,7 +185,7 @@ public class Balizamiento {
                             modeloTabla.getValueAt(i, 4) != null) {
 
                         int confirm = JOptionPane.showConfirmDialog(null, "¿Está seguro que quiere borrar la fila " + (i + 1) + "?",
-                                "Atención", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE, new ImageIcon(getClass().getResource("/alerta.png")));
+                                "Atención", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE, new ImageIcon(getClass().getResource("")));
                         if (confirm == 0) { // Yes en Ventana Emergente
                             modeloTabla.setRowCount(modeloTabla.getRowCount() - 1);
                             break;
@@ -210,12 +210,12 @@ public class Balizamiento {
                 try {
                     int confirm = JOptionPane.showConfirmDialog(null, "¿Está seguro que quiere realizar los cambios?",
                             "Atención", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE,
-                            new ImageIcon(getClass().getResource("/alerta.png")));
+                            new ImageIcon(getClass().getResource("")));
                     if (confirm == 0) { // Yes en Ventana Emergente
                         actualizarDatos();
                         JOptionPane.showMessageDialog(null,
                                 "¡Se actualizaron los datos correctamente!","Confirmación",
-                                JOptionPane.INFORMATION_MESSAGE, new ImageIcon(getClass().getResource("/ok.png")));
+                                JOptionPane.INFORMATION_MESSAGE, new ImageIcon(getClass().getResource("")));
                     } else {
 
                     }

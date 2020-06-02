@@ -267,7 +267,7 @@ public class Persistencia {
                             "' no se encuentra en la carpeta de la aplicación, " +
                             "¿Desea crear el archivo con las variables vacías, o prefiere buscarlo y ponerlo en la carpeta usted mismo?",
                     "Atención", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE,
-                    new ImageIcon(Persistencia.class.getResource("/error.png")));
+                    new ImageIcon(Persistencia.class.getResource("")));
             if (confirm == 0) { // Yes en Ventana Emergente
                 crearTasaAterizajeXML();
             } else {
@@ -307,7 +307,7 @@ public class Persistencia {
                             "' no se encuentra en la carpeta de la aplicación, " +
                             "¿Desea crear el archivo con las variables vacías, o prefiere buscarlo y ponerlo en la carpeta usted mismo?",
                     "Atención", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE,
-                    new ImageIcon(Persistencia.class.getResource("/error.png")));
+                    new ImageIcon(Persistencia.class.getResource("")));
             if (confirm == 0) { // Yes en Ventana Emergente
                 crearTasaEstacionamientoXML();
             } else {
@@ -346,7 +346,7 @@ public class Persistencia {
                             "' no se encuentra en la carpeta de la aplicación, " +
                             "¿Desea crear el archivo con las variables vacías, o prefiere buscarlo y ponerlo en la carpeta usted mismo?",
                     "Atención", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE,
-                    new ImageIcon(Persistencia.class.getResource("/error.png")));
+                    new ImageIcon(Persistencia.class.getResource("")));
             if (confirm == 0) { // Yes en Ventana Emergente
                 crearValoresPaxXML();
             } else {
@@ -385,7 +385,7 @@ public class Persistencia {
                             "' no se encuentra en la carpeta de la aplicación, " +
                             "¿Desea crear el archivo con las variables vacías, o prefiere buscarlo y ponerlo en la carpeta usted mismo?",
                     "Atención", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE,
-                    new ImageIcon(Persistencia.class.getResource("/error.png")));
+                    new ImageIcon(Persistencia.class.getResource("")));
             if (confirm == 0) { // Yes en Ventana Emergente
                 crearSalidaPuestaDelSolXML();
             } else {
