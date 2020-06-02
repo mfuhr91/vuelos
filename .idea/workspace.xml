@@ -8,23 +8,17 @@
   <component name="ChangeListManager">
     <list default="true" id="a2e1d731-38bc-4889-9147-e97e24870488" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Copia de tasas_aterrizaje.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dependency-reduced-pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/vuelos_aiuma/vuelos.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/vuelos_aiuma/vuelos.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/vuelos/modelo/Persistencia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vuelos/modelo/Persistencia.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vuelos/modelo/TasaAterrizaje.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vuelos/modelo/TasaAterrizaje.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vuelos/modelo/Vuelo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vuelos/modelo/Vuelo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vuelos/vistas/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vuelos/vistas/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/vuelos/vistas/Balizamiento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vuelos/vistas/Balizamiento.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/modelo/TasaAterrizaje.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/modelo/TasaAterrizaje.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/Balizamiento$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/Balizamiento$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/Balizamiento$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/Balizamiento$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vuelos/vistas/Tarifario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vuelos/vistas/Tarifario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/modelo/Persistencia.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/modelo/Persistencia.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/App$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/App$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/App$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/App$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/App.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/Balizamiento$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/Balizamiento$3.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/Balizamiento$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/Balizamiento$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/Balizamiento$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/Balizamiento$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/Balizamiento$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/Balizamiento$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/Balizamiento$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/Balizamiento$7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/Balizamiento$ColumnRenderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/Balizamiento$ColumnRenderer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/Balizamiento$Renderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/Balizamiento$Renderer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/Balizamiento.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/Balizamiento.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/Tarifario$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vuelos/vistas/Tarifario$1.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -191,10 +185,11 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="320" y="115" width="800" height="717" key="#Intentions/0.0.1440.900@0.0.1440.900" timestamp="1583933653581" />
-    <state x="320" y="115" key="#Project_Structure" timestamp="1591025791709">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="320" y="128" key="#Project_Structure" timestamp="1591137251330">
+      <screen x="0" y="23" width="1440" height="825" />
     </state>
     <state x="320" y="115" key="#Project_Structure/0.0.1440.900@0.0.1440.900" timestamp="1591025791709" />
+    <state x="320" y="128" key="#Project_Structure/0.23.1440.825@0.23.1440.825" timestamp="1591137251330" />
     <state x="458" y="223" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1584762807419">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -231,29 +226,29 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="472" y="294" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1440.900@0.0.1440.900" timestamp="1591131937451" />
-    <state width="1398" height="153" key="GridCell.Tab.0.bottom" timestamp="1591132147065">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1398" height="153" key="GridCell.Tab.0.bottom" timestamp="1591138213612">
+      <screen x="0" y="23" width="1440" height="825" />
     </state>
     <state width="1398" height="153" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1591132147065" />
-    <state width="1398" height="153" key="GridCell.Tab.0.bottom/0.23.1440.825@0.23.1440.825" timestamp="1591132033153" />
+    <state width="1398" height="153" key="GridCell.Tab.0.bottom/0.23.1440.825@0.23.1440.825" timestamp="1591138213612" />
     <state width="1398" height="183" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1584635373054" />
-    <state width="1398" height="153" key="GridCell.Tab.0.center" timestamp="1591132147062">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1398" height="153" key="GridCell.Tab.0.center" timestamp="1591138213611">
+      <screen x="0" y="23" width="1440" height="825" />
     </state>
     <state width="1398" height="153" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1591132147062" />
-    <state width="1398" height="153" key="GridCell.Tab.0.center/0.23.1440.825@0.23.1440.825" timestamp="1591132033150" />
+    <state width="1398" height="153" key="GridCell.Tab.0.center/0.23.1440.825@0.23.1440.825" timestamp="1591138213611" />
     <state width="1398" height="183" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1584635373052" />
-    <state width="1398" height="153" key="GridCell.Tab.0.left" timestamp="1591132147061">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1398" height="153" key="GridCell.Tab.0.left" timestamp="1591138213610">
+      <screen x="0" y="23" width="1440" height="825" />
     </state>
     <state width="1398" height="153" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1591132147061" />
-    <state width="1398" height="153" key="GridCell.Tab.0.left/0.23.1440.825@0.23.1440.825" timestamp="1591132033146" />
+    <state width="1398" height="153" key="GridCell.Tab.0.left/0.23.1440.825@0.23.1440.825" timestamp="1591138213610" />
     <state width="1398" height="183" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1584635373050" />
-    <state width="1398" height="153" key="GridCell.Tab.0.right" timestamp="1591132147064">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1398" height="153" key="GridCell.Tab.0.right" timestamp="1591138213611">
+      <screen x="0" y="23" width="1440" height="825" />
     </state>
     <state width="1398" height="153" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1591132147064" />
-    <state width="1398" height="153" key="GridCell.Tab.0.right/0.23.1440.825@0.23.1440.825" timestamp="1591132033152" />
+    <state width="1398" height="153" key="GridCell.Tab.0.right/0.23.1440.825@0.23.1440.825" timestamp="1591138213611" />
     <state width="1398" height="183" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1584635373053" />
     <state x="388" y="172" key="GuiDesigner.FormSource.Dialog" timestamp="1584401170871">
       <screen x="0" y="0" width="1440" height="900" />

@@ -181,7 +181,7 @@ public class Balizamiento {
                             modeloTabla.getValueAt(i, 4) != null) {
 
                         int confirm = JOptionPane.showConfirmDialog(null, "¿Está seguro que quiere borrar la fila " + (i + 1) + "?",
-                                "Atención", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE, new ImageIcon(getClass().getResource("")));
+                                "Atención", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE, new ImageIcon(getClass().getResource("/alerta.png")));
                         if (confirm == 0) { // Yes en Ventana Emergente
                             modeloTabla.setRowCount(modeloTabla.getRowCount() - 1);
                             break;
@@ -206,12 +206,12 @@ public class Balizamiento {
                 try {
                     int confirm = JOptionPane.showConfirmDialog(null, "¿Está seguro que quiere realizar los cambios?",
                             "Atención", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE,
-                            new ImageIcon(getClass().getResource("")));
+                            new ImageIcon(getClass().getResource("/alerta.png")));
                     if (confirm == 0) { // Yes en Ventana Emergente
                         actualizarDatos();
                         JOptionPane.showMessageDialog(null,
                                 "¡Se actualizaron los datos correctamente!","Confirmación",
-                                JOptionPane.INFORMATION_MESSAGE, new ImageIcon(getClass().getResource("")));
+                                JOptionPane.INFORMATION_MESSAGE, new ImageIcon(getClass().getResource("/ok.png")));
                     } else {
 
                     }

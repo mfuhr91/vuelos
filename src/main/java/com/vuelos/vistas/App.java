@@ -98,12 +98,12 @@ public class App extends JFrame {
                     } else {
                         JOptionPane.showMessageDialog(null,
                                 "¡Debe completar peso de la aeronave y cotización del dolar!","Atención",
-                                JOptionPane.INFORMATION_MESSAGE,new ImageIcon(getClass().getResource("")));
+                                JOptionPane.INFORMATION_MESSAGE,new ImageIcon(getClass().getResource("/alerta.png")));
                     }
                 } else {
                     JOptionPane.showMessageDialog(null,
                             "¡La cotización no puede ser 0!","Atención",
-                            JOptionPane.INFORMATION_MESSAGE,new ImageIcon(getClass().getResource("")));
+                            JOptionPane.INFORMATION_MESSAGE,new ImageIcon(getClass().getResource("/error.png")));
                 }
             }
 
@@ -127,7 +127,7 @@ public class App extends JFrame {
                 horaArribo.setText(estadia.mostrarHoraActual());
                 horaDespegue.setText(estadia.mostrarHoraActual());
                 estadiaTotal.setText("");
-                cambioMoneda.setText("63,25");
+                cambioMoneda.setText("71,00");
                 precioTotalMovimiento.setText("");
                 paxTotal.setText("");
                 precioTotalPesos.setText("");
@@ -335,7 +335,7 @@ public class App extends JFrame {
         matVuelo.setText("##-###");
         pesoVuelo.setText("1");
         nroPax.setText("0");
-        cambioMoneda.setText("63,25");
+        cambioMoneda.setText("71,00");
         fechaArribo.setText(estadia.mostrarFechaHoy());
         fechaDespegue.setText(estadia.mostrarFechaHoy());
         horaArribo.setText(estadia.mostrarHoraActual());
@@ -408,13 +408,13 @@ public class App extends JFrame {
             }catch(NumberFormatException e){
                 JOptionPane.showMessageDialog(null,
                         "¡El nro de pasajeros no puede contener decimales!","Atención",
-                        JOptionPane.INFORMATION_MESSAGE,new ImageIcon(getClass().getResource("")));
+                        JOptionPane.INFORMATION_MESSAGE,new ImageIcon(getClass().getResource("/alerta.png")));
             }
 
         }catch (ParseException | JAXBException ex) {
             JOptionPane.showMessageDialog(null,
                     "¡Ingrese el formato 'DD/MM/AAAA' para la fecha y 'HH:MM' para la hora!","Error",
-                    JOptionPane.INFORMATION_MESSAGE,new ImageIcon(getClass().getResource("")));
+                    JOptionPane.INFORMATION_MESSAGE,new ImageIcon(getClass().getResource("/error.png")));
         }
     }
 

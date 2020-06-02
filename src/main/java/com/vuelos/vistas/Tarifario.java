@@ -76,13 +76,13 @@ public class Tarifario extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 int confirm = JOptionPane.showConfirmDialog(null, "¿Está seguro que quiere realizar los cambios?",
                         "Atención", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE,
-                        new ImageIcon(getClass().getResource("")));
+                        new ImageIcon(getClass().getResource("/alerta.png")));
                 if (confirm == 0) { // Yes en Ventana Emergente
                     try {
                         actualizarDatos();
                         JOptionPane.showMessageDialog(null,
                                 "¡Se actualizaron los datos correctamente!","Confirmación",
-                                JOptionPane.INFORMATION_MESSAGE, new ImageIcon(getClass().getResource("")));
+                                JOptionPane.INFORMATION_MESSAGE, new ImageIcon(getClass().getResource("/ok.png")));
                     } catch (JAXBException | ParseException ex) {
                         ex.printStackTrace();
                     }
